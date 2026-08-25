@@ -3,7 +3,7 @@
 /* Paste the Web App URL you get from Apps Script > Deploy > New deployment here.
    Until this is filled in, the app just runs on the embedded starting data below
    (edits still work in the browser, they just won't be saved anywhere). */
-const APPS_SCRIPT_URL = "PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE";
+const APPS_SCRIPT_URL = https://script.google.com/macros/s/AKfycbymuM6B2XRbW8_yZq3Ar5PRoMFroQqRWG4P4myiPTown5T0bgsT63kGornvwtCvRgEx/exec
 
 const BUSINESS_GROUPS = {
   "Magna Pacific": ["Mortgage/Rent","aya water both villas","Electricity","ccss","accounting","daiana","Internet","instagram","gas","workers pay","gas for car","Repairs","Other"],
