@@ -311,66 +311,6 @@
   .footnote{ margin-top:30px; padding-top:16px; border-top:1px solid var(--border); font-size:12px; color:var(--ink-muted); line-height:1.7; }
   .footnote b{ color:var(--ink-2); }
 
-
-  /* ---------- v2 additions ---------- */
-  .pill.warn{ background:#F6E7C8; color:#7A5208; }
-  :root[data-theme="dark"] .pill.warn{ background:#3A2D12; color:#E0A93C; }
-  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .pill.warn{ background:#3A2D12; color:#E0A93C; } }
-  .pill.st-ok{ background:#DDF1E4; color:#17693A; }
-  .pill.st-warn{ background:#F6E7C8; color:#7A5208; }
-  .pill.st-crit{ background:#F6DDDB; color:#97292A; }
-  .pill.st-muted{ background:var(--surface-3); color:var(--ink-2); }
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]) .pill.st-ok{ background:#17301F; color:#6FD39A; }
-    :root:not([data-theme="light"]) .pill.st-warn{ background:#3A2D12; color:#E0A93C; }
-    :root:not([data-theme="light"]) .pill.st-crit{ background:#3A1C1B; color:#F0908A; }
-  }
-  :root[data-theme="dark"] .pill.st-ok{ background:#17301F; color:#6FD39A; }
-  :root[data-theme="dark"] .pill.st-warn{ background:#3A2D12; color:#E0A93C; }
-  :root[data-theme="dark"] .pill.st-crit{ background:#3A1C1B; color:#F0908A; }
-
-  /* wide sheets scroll sideways instead of squashing their columns */
-  #incomeTable{ min-width:1900px; }
-  #expenseTable{ min-width:1050px; }
-  #fixedTable{ min-width:1100px; }
-  #paymentTable{ min-width:1150px; }
-  .w-type{ min-width:150px; } .w-client{ min-width:190px; } .w-ctype{ min-width:175px; }
-  .w-villa{ min-width:140px; } .w-date{ min-width:140px; } .w-num{ min-width:88px; } .w-plat{ min-width:150px; }
-  .w-amt{ min-width:110px; } .w-cur{ min-width:84px; } .w-pay{ min-width:130px; } .w-notes{ min-width:200px; }
-  .w-group{ min-width:180px; } .w-cat{ min-width:170px; } .w-booking{ min-width:330px; } .w-method{ min-width:150px; }
-  .w-receipt{ min-width:210px; } .w-check{ min-width:52px; text-align:center; }
-  .net-cell{ padding:0 12px; font-weight:600; background:var(--surface-2); }
-  .usd-cell{ padding:0 12px; color:var(--ink-2); }
-  tr.row-infl{ background:color-mix(in srgb, var(--gold) 9%, transparent); }
-  tr.row-auto td.cell:first-child{ box-shadow: inset 3px 0 0 var(--gold); }
-  .client-cell{ display:flex; align-items:center; }
-  .client-cell .cell-input{ flex:1; min-width:0; }
-  .link-btn{ border:none; background:transparent; color:var(--biz); font-weight:700; cursor:pointer; padding:4px 8px; border-radius:6px; font-size:15px; }
-  .link-btn:hover{ background:var(--biz-soft); }
-  .pill-btn{ border:none; background:transparent; cursor:pointer; padding:4px 6px; }
-  .pill-btn:hover .pill{ filter:brightness(0.95); }
-  .name-link{ border:none; background:transparent; color:var(--biz); font-weight:600; cursor:pointer; padding:0; text-decoration:underline; text-underline-offset:2px; font-size:13px; }
-  .cell-check{ width:18px; height:18px; accent-color:var(--biz); cursor:pointer; }
-  .receipt-cell{ padding:2px 8px; white-space:nowrap; }
-  .receipt-link{ color:var(--biz); font-weight:600; font-size:13px; text-decoration:none; }
-  .receipt-link:hover{ text-decoration:underline; }
-  .receipt-btn{ font-size:12.5px; padding:5px 9px; border-color:var(--border-strong); }
-  .banner{ display:none; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap; background:var(--per-soft); border:1px solid var(--border-strong); border-radius:12px; padding:10px 14px; margin-bottom:12px; font-size:13px; }
-  .assign-actions{ display:flex; gap:8px; align-items:center; }
-  .totals-line{ margin:8px 2px 0; font-size:12.5px; color:var(--ink-2); }
-  .section-title{ font-size:15px; margin:30px 0 4px; }
-  .section-note{ font-size:12.5px; color:var(--ink-muted); margin:0 0 10px; max-width:75ch; }
-  .fx-row{ display:flex; align-items:center; gap:8px; margin-top:12px; font-size:12.5px; color:var(--ink-2); flex-wrap:wrap; }
-  .fx-input{ width:84px; border:1px solid var(--border-strong); background:var(--surface); color:var(--ink); border-radius:8px; padding:5px 8px; text-align:end; }
-  .mini-table.pnl td{ padding:9px 6px; }
-  .mini-table.pnl tr.pnl-sub td{ font-weight:700; }
-  .mini-table.pnl tr.pnl-total td{ font-weight:800; font-size:14.5px; border-top:2px solid var(--border-strong); }
-  .mini-table.pnl td.neg{ color:var(--crit); }
-  .name-col{ white-space:nowrap; }
-  .fixed-box{ background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:12px 16px; margin-bottom:14px; box-shadow:var(--shadow); }
-  .fixed-box summary{ cursor:pointer; font-size:14px; }
-  .fixed-box[open] summary{ margin-bottom:8px; }
-
   @media (max-width:640px){
     .field-row{ grid-template-columns:1fr; }
     .topbar{ flex-direction:column; align-items:flex-start; }
@@ -385,17 +325,16 @@
       <div class="brand-mark">MP</div>
       <div>
         <h1>Magna Pacific</h1>
-        <div class="tagline">Income &amp; expense management · Villas, Moti and Sivan</div>
+        <div class="tagline">Income &amp; expense management · Business and personal</div>
       </div>
     </div>
     <div class="topbar-controls">
       <div class="save-status"><span class="save-dot" id="saveDot"></span><span id="saveText">Loading…</span></div>
       <select id="yearFilter" aria-label="Filter by year"></select>
-      <div class="segmented" id="sectorSeg" role="tablist" aria-label="Filter business / Moti / Sivan">
+      <div class="segmented" id="sectorSeg" role="tablist" aria-label="Filter business/personal">
         <button data-sector="all" class="active">All</button>
         <button data-sector="business">Business</button>
-        <button data-sector="moti">Moti</button>
-        <button data-sector="sivan">Sivan</button>
+        <button data-sector="personal">Personal</button>
       </div>
     </div>
   </div>
@@ -403,7 +342,6 @@
   <div class="tabs" role="tablist">
     <button class="tab active" data-view="overview">Summary</button>
     <button class="tab" data-view="income">Income</button>
-    <button class="tab" data-view="payments">Payments</button>
     <button class="tab" data-view="expenses">Expenses</button>
   </div>
 
@@ -429,7 +367,6 @@
         <input type="search" id="incomeSearch" placeholder="Search client / villa / platform…">
         <select id="incomeVillaFilter" aria-label="Filter by villa"></select>
         <select id="incomePlatformFilter" aria-label="Filter by platform"></select>
-        <select id="incomeClientTypeFilter" aria-label="Filter by client type"></select>
         <select id="incomeCurrencyFilter" aria-label="Filter by currency"></select>
         <button class="btn btn-ghost" id="incomeClearFiltersBtn">Clear filters</button>
         <button class="btn btn-export" id="exportIncomeBtn">⬇ Export to Excel</button>
@@ -437,29 +374,7 @@
     </div>
     <div class="table-wrap"><table id="incomeTable"><thead></thead><tbody></tbody></table></div>
     <button class="btn btn-primary add-row-btn" id="addIncomeBtn">+ New row</button>
-    <div class="totals-line" id="incomeTotals"></div>
     <datalist id="platformList"></datalist>
-  </section>
-
-  <!-- PAYMENTS -->
-  <section class="view" id="view-payments">
-    <div class="table-toolbar">
-      <h3 style="font-size:15px;">Payments tracking <span class="sheet-hint">— record every payment per client and attach its receipt</span></h3>
-      <div class="filters">
-        <input type="search" id="paySearch" placeholder="Search method / notes…">
-        <select id="payClientFilter" aria-label="Filter by client"></select>
-        <button class="btn btn-ghost" id="payClearBtn">Clear filters</button>
-        <button class="btn btn-export" id="exportPaymentsBtn">⬇ Export to Excel</button>
-      </div>
-    </div>
-    <div id="payClientSummary"></div>
-    <h3 class="section-title">Payments log</h3>
-    <p class="section-note">One row per payment received. Pick the booking it belongs to, then upload the receipt (image or PDF, up to 8 MB). Receipts are stored privately in your Google Drive and linked here — only you can open them while signed in to Google.</p>
-    <div class="table-wrap"><table id="paymentTable"></table></div>
-    <button class="btn btn-primary add-row-btn" id="addPaymentBtn">+ New payment</button>
-    <div class="totals-line" id="paymentTotals"></div>
-    <input type="file" id="receiptFile" accept="image/*,application/pdf" hidden>
-    <datalist id="methodList"></datalist>
   </section>
 
   <!-- EXPENSES -->
@@ -475,23 +390,13 @@
         <button class="btn btn-export" id="exportExpenseBtn">⬇ Export to Excel</button>
       </div>
     </div>
-    <div class="banner" id="assignBar"></div>
-    <details class="fixed-box" id="fixedBox">
-      <summary><b>Fixed monthly expenses</b> <span id="fixedCount" class="sheet-hint"></span> <span class="sheet-hint">— entered automatically every month</span></summary>
-      <p class="section-note">Expenses that repeat every month (mortgage, internet, salaries…). Once a row is active, a matching expense is added to the sheet below automatically for every month from <i>From month</i> up to the current month — and a new one each month after that. A month that already has a row for the same type, group and category is never duplicated. Delete an auto-added row and it will not come back.</p>
-      <div class="table-wrap"><table id="fixedTable"></table></div>
-      <button class="btn btn-ghost add-row-btn" id="addFixedBtn">+ New fixed expense</button>
-    </details>
     <div class="table-wrap"><table id="expenseTable"><thead></thead><tbody></tbody></table></div>
     <button class="btn btn-personal add-row-btn" id="addExpenseBtn">+ New row</button>
-    <div class="totals-line" id="expenseTotals"></div>
   </section>
 
   <div class="footnote">
-    <div><b>Currency:</b> every record keeps its original currency (USD / ILS) in the sheets. The overview converts everything to USD using the exchange rate shown in the "How the total is built" panel — change it there and all totals follow.</div>
-    <div><b>Income:</b> <i>Gross</i> is the price of the stay, <i>Net price</i> is the gross after the platform / agency commission. A stay counts in the year and month of its <b>check-in</b>. Influencer stays count nights but no income. Payments are tracked against the net price.</div>
-    <div><b>Channels:</b> Direct, Airbnb, and Agencies (every other platform or agent). A stay sold as "airbnb + direct" is counted under Airbnb — change its platform if you want it elsewhere.</div>
-    <div><b>Historical data:</b> the stays were loaded from your Excel file (dates from its "date of stay" column and year). Payment dates were not in the file, so they start out equal to the check-in date — overwrite them as you go.</div>
+    <div><b>Currency:</b> every record is saved in its original currency (USD/ILS) and displayed and totaled separately by currency — there is no automatic conversion between currencies.</div>
+    <div><b>Historical data:</b> bookings and expenses from the original files were loaded as a starting point. For older records where only a date range was given (e.g. "22/12-30/12"), a month and year were estimated from the original table's context — worth double-checking important details as you go. New records you add will be saved with an exact date.</div>
     <div id="updatedAt" style="margin-top:6px;"></div>
   </div>
 
@@ -500,7 +405,3388 @@
 <div class="chart-tooltip" id="chartTooltip"></div>
 <div class="toast-wrap" id="toastWrap"></div>
 
-<script id="seed-data" type="application/json">{"version": 2, "updatedAt": "2026-11-07T16:05:54.100278Z", "incomeRecords": [{"id": "bi-1", "sector": "business", "owner": "", "date": "2023-12-22", "checkIn": "2023-12-22", "checkOut": "2023-12-30", "clientType": "paying", "client": "Satin Family", "villa": "Elu", "nights": 9, "pricePerNight": 5400, "platform": "travel pioneers", "commissionRate": 0.05, "category": "Villa booking", "grossAmount": 54918.0, "netAmount": 52172.1, "currency": "USD", "notes": "Check nights: Excel says 9, the dates give 8"}, {"id": "bi-2", "sector": "business", "owner": "", "date": "2023-12-27", "checkIn": "2023-12-27", "checkOut": "2024-01-06", "clientType": "paying", "client": "Mario", "villa": "Nalani", "nights": 10, "pricePerNight": 6000, "platform": "yuli", "commissionRate": 0.05, "category": "Villa booking", "grossAmount": 57000.0, "netAmount": 54150.0, "currency": "USD", "notes": "VAT: no"}, {"id": "bi-3", "sector": "business", "owner": "", "date": "2023-12-31", "checkIn": "2023-12-31", "checkOut": "2024-01-02", "clientType": "paying", "client": "Jamie", "villa": "Elu", "nights": 2, "pricePerNight": 2000, "platform": "direct", "commissionRate": null, "category": "Villa booking", "grossAmount": 4000.0, "netAmount": 4000.0, "currency": "USD", "notes": "VAT: no"}, {"id": "bi-4", "sector": "business", "owner": "", "date": "2024-01-29", "checkIn": "2024-01-29", "checkOut": "2024-02-04", "clientType": "paying", "client": "Clair Duddle", "villa": "Elu", "nights": 6, "pricePerNight": 1500, "platform": "airbnb", "commissionRate": 0.15, "category": "Villa booking", "grossAmount": 8694.0, "netAmount": 7389.9, "currency": "USD", "notes": ""}, {"id": "bi-5", "sector": "business", "owner": "", "date": "2024-02-21", "checkIn": "2024-02-21", "checkOut": "2024-02-24", "clientType": "paying", "client": "Anthony Gustin", "villa": "Elu", "nights": 3, "pricePerNight": 1000, "platform": "airbnb", "commissionRate": 0.15, "category": "Villa booking", "grossAmount": 2881.0, "netAmount": 2448.85, "currency": "USD", "notes": ""}, {"id": "bi-6", "sector": "business", "owner": "", "date": "2024-02-29", "checkIn": "2024-02-29", "checkOut": "2024-03-03", "clientType": "paying", "client": "Jennifer Barlettani", "villa": "Elu", "nights": 3, "pricePerNight": 1800, "platform": "airbnb", "commissionRate": 0.15, "category": "Villa booking", "grossAmount": 6102.0, "netAmount": 5186.7, "currency": "USD", "notes": ""}, {"id": "bi-7", "sector": "business", "owner": "", "date": "2024-03-10", "checkIn": "2024-03-10", "checkOut": "2024-03-14", "clientType": "paying", "client": "Rudy Topete", "villa": "Nalani", "nights": 4, "pricePerNight": 2939, "platform": "airbnb", "commissionRate": 0.15, "category": "Villa booking", "grossAmount": 11756.0, "netAmount": 9992.6, "currency": "USD", "notes": ""}, {"id": "bi-8", "sector": "business", "owner": "", "date": "2024-03-14", "checkIn": "2024-03-14", "checkOut": "2024-03-17", "clientType": "paying", "client": "Mathilda Vial", "villa": "Elu", "nights": 3, "pricePerNight": 2744, "platform": "airbnb", "commissionRate": 0.15, "category": "Villa booking", "grossAmount": 8232.0, "netAmount": 6997.2, "currency": "USD", "notes": ""}, {"id": "bi-9", "sector": "business", "owner": "", "date": "2024-03-23", "checkIn": "2024-03-23", "checkOut": "2024-03-26", "clientType": "paying", "client": "Mike Sherill", "villa": "Elu", "nights": 6, "pricePerNight": 2303, "platform": "airbnb", "commissionRate": 0.15, "category": "Villa booking", "grossAmount": 13818.0, "netAmount": 11745.3, "currency": "USD", "notes": "Check nights: Excel says 6, the dates give 3"}, {"id": "bi-10", "sector": "business", "owner": "", "date": "2024-04-08", "checkIn": "2024-04-08", "checkOut": "2024-04-14", "clientType": "paying", "client": "Austin Vance", "villa": "Nalani", "nights": 6, "pricePerNight": 2083, "platform": "direct", "commissionRate": null, "category": "Villa booking", "grossAmount": 12500.0, "netAmount": 12500.0, "currency": "USD", "notes": ""}, {"id": "bi-11", "sector": "business", "owner": "", "date": "2024-05-02", "checkIn": "2024-05-02", "checkOut": "2024-05-12", "clientType": "paying", "client": "Jamie", "villa": "Nalani", "nights": 10, "pricePerNight": 1800, "platform": "direct", "commissionRate": null, "category": "Villa booking", "grossAmount": 18000.0, "netAmount": 18000.0, "currency": "USD", "notes": ""}, {"id": "bi-12", "sector": "business", "owner": "", "date": "2024-05-08", "checkIn": "2024-05-08", "checkOut": "2024-05-12", "clientType": "paying", "client": "Jamie", "villa": "Elu", "nights": 4, "pricePerNight": 1400, "platform": "direct", "commissionRate": null, "category": "Villa booking", "grossAmount": 5600.0, "netAmount": 5600.0, "currency": "USD", "notes": ""}, {"id": "bi-13", "sector": "business", "owner": "", "date": "2024-04-09", "checkIn": "2024-04-09", "checkOut": "2024-04-18", "clientType": "paying", "client": "Victor Almeida", "villa": "Elu", "nights": 9, "pricePerNight": 2088, "platform": "airbnb", "commissionRate": 0.15, "category": "Villa booking", "grossAmount": 18424.0, "netAmount": 15660.4, "currency": "USD", "notes": ""}, {"id": "bi-14", "sector": "business", "owner": "", "date": "2024-05-24", "checkIn": "2024-05-24", "checkOut": "2024-05-28", "clientType": "paying", "client": "Shassity Stevenson", "villa": "Elu", "nights": 4, "pricePerNight": 2100, "platform": "airbnb", "commissionRate": 0.15, "category": "Villa booking", "grossAmount": 8232.0, "netAmount": 6997.2, "currency": "USD", "notes": ""}, {"id": "bi-15", "sector": "business", "owner": "", "date": "2024-07-07", "checkIn": "2024-07-07", "checkOut": "2024-07-21", "clientType": "paying", "client": "Patrick Callahan", "villa": "Elu", "nights": 14, "pricePerNight": 2500, "platform": "direct", "commissionRate": null, "category": "Villa booking", "grossAmount": 35000.0, "netAmount": 35000.0, "currency": "USD", "notes": ""}, {"id": "bi-16", "sector": "business", "owner": "", "date": "2024-07-22", "checkIn": "2024-07-22", "checkOut": "2024-08-03", "clientType": "paying", "client": "Evan", "villa": "Elu", "nights": 12, "pricePerNight": 2500, "platform": "origin", "commissionRate": null, "category": "Villa booking", "grossAmount": 33900.0, "netAmount": 33900.0, "currency": "USD", "notes": ""}, {"id": "bi-17", "sector": "business", "owner": "", "date": "2024-08-15", "checkIn": "2024-08-15", "checkOut": "2024-08-30", "clientType": "paying", "client": "Beatrice", "villa": "Elu", "nights": 15, "pricePerNight": 1821, "platform": "airbnb", "commissionRate": 0.15, "category": "Villa booking", "grossAmount": 27315.0, "netAmount": 23217.75, "currency": "USD", "notes": ""}, {"id": "bi-18", "sector": "business", "owner": "", "date": "2024-07-07", "checkIn": "2024-07-07", "checkOut": "2024-07-14", "clientType": "paying", "client": "Hadas", "villa": "Nalani", "nights": 7, "pricePerNight": 1214, "platform": "direct", "commissionRate": null, "category": "Villa booking", "grossAmount": 8500.0, "netAmount": 8500.0, "currency": "USD", "notes": ""}, {"id": "bi-19", "sector": "business", "owner": "", "date": "2024-10-24", "checkIn": "2024-10-24", "checkOut": "2024-10-27", "clientType": "paying", "client": "Roberto Gamboa", "villa": "Elu + Nalani", "nights": 3, "pricePerNight": null, "platform": "direct", "commissionRate": null, "category": "Villa booking", "grossAmount": 10000.0, "netAmount": 10000.0, "currency": "USD", "notes": ""}, {"id": "bi-20", "sector": "business", "owner": "", "date": "2024-10-31", "checkIn": "2024-10-31", "checkOut": "2024-11-03", "clientType": "paying", "client": "Juliana Mulholland", "villa": "Elu", "nights": 3, "pricePerNight": null, "platform": "journey", "commissionRate": 0.15, "category": "Villa booking", "grossAmount": 8475.0, "netAmount": 7203.75, "currency": "USD", "notes": ""}, {"id": "bi-21", "sector": "business", "owner": "", "date": "2024-11-25", "checkIn": "2024-11-25", "checkOut": "2024-11-29", "clientType": "paying", "client": "Mike", "villa": "Elu", "nights": 4, "pricePerNight": null, "platform": "airbnb", "commissionRate": null, "category": "Villa booking", "grossAmount": 12256.0, "netAmount": 12256.0, "currency": "USD", "notes": ""}, {"id": "bi-22", "sector": "business", "owner": "", "date": "2024-12-05", "checkIn": "2024-12-05", "checkOut": "2024-12-12", "clientType": "paying", "client": "Darius", "villa": "Elu", "nights": 7, "pricePerNight": null, "platform": "frederick soutbys", "commissionRate": 0.1, "category": "Villa booking", "grossAmount": 20000.0, "netAmount": 18000.0, "currency": "USD", "notes": "Stay dates reconstructed: Excel had converted the entry into a date (2012-12-05) — assumed 5–12 Dec"}, {"id": "bi-23", "sector": "business", "owner": "", "date": "2024-12-24", "checkIn": "2024-12-24", "checkOut": "2024-12-27", "clientType": "paying", "client": "Jessica And David Sawin", "villa": "Nalani", "nights": 3, "pricePerNight": null, "platform": "direct", "commissionRate": null, "category": "Villa booking", "grossAmount": 8475.0, "netAmount": 8475.0, "currency": "USD", "notes": ""}, {"id": "bi-24", "sector": "business", "owner": "", "date": "2024-12-27", "checkIn": "2024-12-27", "checkOut": "2025-01-08", "clientType": "paying", "client": "Mario", "villa": "Nalani", "nights": 10, "pricePerNight": null, "platform": "rinat", "commissionRate": 0.05, "category": "Villa booking", "grossAmount": 96000.0, "netAmount": 91200.0, "currency": "USD", "notes": "Check nights: Excel says 10, the dates give 12"}, {"id": "bi-25", "sector": "business", "owner": "", "date": "2024-12-20", "checkIn": "2024-12-20", "checkOut": "2025-01-03", "clientType": "paying", "client": "Hue Lane", "villa": "Elu", "nights": 14, "pricePerNight": null, "platform": "freddie luxery travel", "commissionRate": 0.15, "category": "Villa booking", "grossAmount": 78120.0, "netAmount": 66402.0, "currency": "USD", "notes": ""}, {"id": "bi-26", "sector": "business", "owner": "", "date": "2025-01-10", "checkIn": "2025-01-10", "checkOut": "2025-02-02", "clientType": "paying", "client": "Jack Mallers", "villa": "Elu", "nights": 24, "pricePerNight": null, "platform": "airbnb + direct", "commissionRate": null, "category": "Villa booking", "grossAmount": 60000.0, "netAmount": 60000.0, "currency": "USD", "notes": "Check nights: Excel says 24, the dates give 23"}, {"id": "bi-27", "sector": "business", "owner": "", "date": "2025-02-10", "checkIn": "2025-02-10", "checkOut": "2025-03-10", "clientType": "paying", "client": "Darius", "villa": "Nalani", "nights": 28, "pricePerNight": null, "platform": "direct", "commissionRate": null, "category": "Villa booking", "grossAmount": 60000.0, "netAmount": 60000.0, "currency": "USD", "notes": "Excel col J (no header): 58000"}, {"id": "bi-28", "sector": "business", "owner": "", "date": "2025-03-15", "checkIn": "2025-03-15", "checkOut": "2025-03-22", "clientType": "paying", "client": "Giacomo Maroni", "villa": "Nalani", "nights": 7, "pricePerNight": null, "platform": "airbnb", "commissionRate": null, "category": "Villa booking", "grossAmount": 18000.0, "netAmount": 18000.0, "currency": "USD", "notes": ""}, {"id": "bi-29", "sector": "business", "owner": "", "date": "2025-04-10", "checkIn": "2025-04-10", "checkOut": "2025-04-17", "clientType": "paying", "client": "Leo", "villa": "Nalani", "nights": 7, "pricePerNight": null, "platform": "romi", "commissionRate": null, "category": "Villa booking", "grossAmount": 10000.0, "netAmount": 10000.0, "currency": "USD", "notes": ""}, {"id": "bi-30", "sector": "business", "owner": "", "date": "2025-04-11", "checkIn": "2025-04-11", "checkOut": "2025-04-16", "clientType": "paying", "client": "Jose Gonzalez", "villa": "Elu", "nights": 5, "pricePerNight": null, "platform": "airbnb", "commissionRate": null, "category": "Villa booking", "grossAmount": 12000.0, "netAmount": 12000.0, "currency": "USD", "notes": ""}, {"id": "bi-31", "sector": "business", "owner": "", "date": "2025-05-18", "checkIn": "2025-05-18", "checkOut": "2025-05-22", "clientType": "paying", "client": "Rachel Day", "villa": "Elu", "nights": 4, "pricePerNight": null, "platform": "airbnb", "commissionRate": null, "category": "Villa booking", "grossAmount": 6500.0, "netAmount": 6500.0, "currency": "USD", "notes": ""}, {"id": "bi-32", "sector": "business", "owner": "", "date": "2025-06-30", "checkIn": "2025-06-30", "checkOut": "2025-07-06", "clientType": "paying", "client": "Grace Byrd", "villa": "Elu", "nights": 6, "pricePerNight": null, "platform": "vrbo", "commissionRate": null, "category": "Villa booking", "grossAmount": 15691.0, "netAmount": 15691.0, "currency": "USD", "notes": ""}, {"id": "bi-33", "sector": "business", "owner": "", "date": "2025-07-14", "checkIn": "2025-07-14", "checkOut": "2025-07-17", "clientType": "paying", "client": "Joe", "villa": "Elu", "nights": 3, "pricePerNight": null, "platform": "direct", "commissionRate": null, "category": "Villa booking", "grossAmount": 3000.0, "netAmount": 3000.0, "currency": "USD", "notes": ""}, {"id": "bi-34", "sector": "business", "owner": "", "date": "2025-07-19", "checkIn": "2025-07-19", "checkOut": "2025-07-26", "clientType": "paying", "client": "Koby Conrad", "villa": "Nalani", "nights": 7, "pricePerNight": null, "platform": "airbnb", "commissionRate": null, "category": "Villa booking", "grossAmount": 16000.0, "netAmount": 16000.0, "currency": "USD", "notes": ""}, {"id": "bi-35", "sector": "business", "owner": "", "date": "2025-07-25", "checkIn": "2025-07-25", "checkOut": "2025-07-28", "clientType": "paying", "client": "Davis", "villa": "Elu", "nights": 3, "pricePerNight": null, "platform": "direct", "commissionRate": null, "category": "Villa booking", "grossAmount": 3000.0, "netAmount": 3000.0, "currency": "USD", "notes": ""}, {"id": "bi-36", "sector": "business", "owner": "", "date": "2025-08-18", "checkIn": "2025-08-18", "checkOut": "2025-08-22", "clientType": "paying", "client": "Clara", "villa": "Elu", "nights": 4, "pricePerNight": null, "platform": "airbnb", "commissionRate": null, "category": "Villa booking", "grossAmount": 7000.0, "netAmount": 7000.0, "currency": "USD", "notes": ""}, {"id": "bi-37", "sector": "business", "owner": "", "date": "2025-11-06", "checkIn": "2025-11-06", "checkOut": "2025-12-15", "clientType": "paying", "client": "Rishi Bajaj", "villa": "Nalani", "nights": 38, "pricePerNight": null, "platform": "lee", "commissionRate": 0.045, "category": "Villa booking", "grossAmount": 77292.0, "netAmount": 73813.86, "currency": "USD", "notes": "Check nights: Excel says 38, the dates give 39 | Excel col J (no header): 72500"}, {"id": "bi-38", "sector": "business", "owner": "", "date": "2025-11-18", "checkIn": "2025-11-18", "checkOut": "2025-11-23", "clientType": "paying", "client": "Tiffaney And Tom", "villa": "Elu", "nights": 5, "pricePerNight": null, "platform": "brett", "commissionRate": 0.1, "category": "Villa booking", "grossAmount": 14690.0, "netAmount": 13221.0, "currency": "USD", "notes": "Excel col J (no header): 13390"}, {"id": "bi-39", "sector": "business", "owner": "", "date": "2025-12-19", "checkIn": "2025-12-19", "checkOut": "2025-12-26", "clientType": "paying", "client": "Maria Fernendaz", "villa": "Nalani", "nights": 7, "pricePerNight": null, "platform": "my private villas", "commissionRate": 0.15, "category": "Villa booking", "grossAmount": 56048.0, "netAmount": 47640.8, "currency": "USD", "notes": "Excel col J (no header): 48608"}, {"id": "bi-40", "sector": "business", "owner": "", "date": "2025-12-19", "checkIn": "2025-12-19", "checkOut": "2025-12-24", "clientType": "paying", "client": "Adam Kelly", "villa": "Elu", "nights": 5, "pricePerNight": null, "platform": "frederick soutbys", "commissionRate": 0.1, "category": "Villa booking", "grossAmount": 22600.0, "netAmount": 20340.0, "currency": "USD", "notes": "Excel col J (no header): 20600"}, {"id": "bi-41", "sector": "business", "owner": "", "date": "2025-12-26", "checkIn": "2025-12-26", "checkOut": "2026-01-05", "clientType": "paying", "client": "Vip Clients New Years", "villa": "Elu + Nalani", "nights": 10, "pricePerNight": null, "platform": "journey", "commissionRate": 0.15, "category": "Villa booking", "grossAmount": 181000.0, "netAmount": 153850.0, "currency": "USD", "notes": ""}, {"id": "bi-42", "sector": "business", "owner": "", "date": "2025-11-23", "checkIn": "2025-11-23", "checkOut": "2025-11-30", "clientType": "paying", "client": "Yasmine", "villa": "Elu", "nights": 7, "pricePerNight": null, "platform": "airbnb", "commissionRate": null, "category": "Villa booking", "grossAmount": 21800.0, "netAmount": 21800.0, "currency": "USD", "notes": ""}, {"id": "bi-43", "sector": "business", "owner": "", "date": "2026-01-07", "checkIn": "2026-01-07", "checkOut": "2026-01-14", "clientType": "paying", "client": "Mario", "villa": "Nalani", "nights": 7, "pricePerNight": null, "platform": "direct", "commissionRate": null, "category": "Villa booking", "grossAmount": 28000.0, "netAmount": 28000.0, "currency": "USD", "notes": ""}, {"id": "bi-44", "sector": "business", "owner": "", "date": "2026-01-05", "checkIn": "2026-01-05", "checkOut": "2026-01-18", "clientType": "paying", "client": "Axel", "villa": "Elu", "nights": 13, "pricePerNight": null, "platform": "lee", "commissionRate": 0.1, "category": "Villa booking", "grossAmount": 27900.0, "netAmount": 25110.0, "currency": "USD", "notes": "Excel col J (no header): 25000"}, {"id": "bi-45", "sector": "business", "owner": "", "date": "2026-03-30", "checkIn": "2026-03-30", "checkOut": "2026-04-06", "clientType": "paying", "client": "Nofar", "villa": "Nalani", "nights": 6, "pricePerNight": null, "platform": "direct", "commissionRate": null, "category": "Villa booking", "grossAmount": 22000.0, "netAmount": 22000.0, "currency": "USD", "notes": "Check nights: Excel says 6, the dates give 7"}, {"id": "bi-46", "sector": "business", "owner": "", "date": "2026-01-28", "checkIn": "2026-01-28", "checkOut": "2026-02-21", "clientType": "paying", "client": "Yan", "villa": "Nalani", "nights": 22, "pricePerNight": null, "platform": "direct", "commissionRate": null, "category": "Villa booking", "grossAmount": 65000.0, "netAmount": 65000.0, "currency": "USD", "notes": "Check nights: Excel says 22, the dates give 24"}, {"id": "bi-47", "sector": "business", "owner": "", "date": "2026-02-12", "checkIn": "2026-02-12", "checkOut": "2026-02-15", "clientType": "paying", "client": "Jonathan", "villa": "Elu", "nights": 3, "pricePerNight": null, "platform": "airbnb", "commissionRate": null, "category": "Villa booking", "grossAmount": 7497.0, "netAmount": 7497.0, "currency": "USD", "notes": "Excel col J (no header): 8600"}, {"id": "bi-48", "sector": "business", "owner": "", "date": "2026-02-15", "checkIn": "2026-02-15", "checkOut": "2026-02-24", "clientType": "paying", "client": "Mariana", "villa": "Elu", "nights": 9, "pricePerNight": null, "platform": "airbnb", "commissionRate": null, "category": "Villa booking", "grossAmount": 21929.0, "netAmount": 21929.0, "currency": "USD", "notes": "Excel col J (no header): 25301"}, {"id": "bi-49", "sector": "business", "owner": "", "date": "2026-03-15", "checkIn": "2026-03-15", "checkOut": "2026-03-19", "clientType": "paying", "client": "Chase", "villa": "Elu", "nights": 4, "pricePerNight": null, "platform": "airbnb", "commissionRate": 0.15, "category": "Villa booking", "grossAmount": 9707.0, "netAmount": 8250.95, "currency": "USD", "notes": "Excel col J (no header): 11256"}, {"id": "bi-50", "sector": "business", "owner": "", "date": "2026-03-16", "checkIn": "2026-03-16", "checkOut": "2026-03-21", "clientType": "paying", "client": "Mark", "villa": "Elu", "nights": 5, "pricePerNight": null, "platform": "airbnb", "commissionRate": null, "category": "Villa booking", "grossAmount": 11936.0, "netAmount": 11936.0, "currency": "USD", "notes": ""}, {"id": "bi-51", "sector": "business", "owner": "", "date": "2026-04-04", "checkIn": "2026-04-04", "checkOut": "2026-04-12", "clientType": "paying", "client": "Offer", "villa": "Elu", "nights": 8, "pricePerNight": null, "platform": "airbnb", "commissionRate": null, "category": "Villa booking", "grossAmount": 13970.0, "netAmount": 13970.0, "currency": "USD", "notes": ""}, {"id": "bi-52", "sector": "business", "owner": "", "date": "2026-04-11", "checkIn": "2026-04-11", "checkOut": "2026-04-15", "clientType": "paying", "client": "Joshua Morris", "villa": "Nalani", "nights": 4, "pricePerNight": null, "platform": "airbnb", "commissionRate": null, "category": "Villa booking", "grossAmount": 13591.0, "netAmount": 13591.0, "currency": "USD", "notes": "Excel col J (no header): 16112"}, {"id": "bi-53", "sector": "business", "owner": "", "date": "2026-05-14", "checkIn": "2026-05-14", "checkOut": "2026-05-17", "clientType": "paying", "client": "Ford", "villa": "Elu + Nalani", "nights": 3, "pricePerNight": null, "platform": "airbnb", "commissionRate": 0.15, "category": "Villa booking", "grossAmount": 14797.0, "netAmount": 12577.45, "currency": "USD", "notes": "Excel col J (no header): 17160"}, {"id": "bi-54", "sector": "business", "owner": "", "date": "2026-05-21", "checkIn": "2026-05-21", "checkOut": "2026-05-25", "clientType": "paying", "client": "Chirag", "villa": "Elu + Nalani", "nights": 4, "pricePerNight": null, "platform": "airbnb", "commissionRate": 0.15, "category": "Villa booking", "grossAmount": 15952.0, "netAmount": 13559.2, "currency": "USD", "notes": "Excel col J (no header): 18500"}, {"id": "bi-55", "sector": "business", "owner": "", "date": "2026-05-01", "checkIn": "2026-05-01", "checkOut": "2026-05-11", "clientType": "paying", "client": "Bruno", "villa": "Elu + Nalani", "nights": 10, "pricePerNight": null, "platform": "direct", "commissionRate": null, "category": "Villa booking", "grossAmount": 34000.0, "netAmount": 34000.0, "currency": "USD", "notes": "Excel date text says 2025 but its year column says 2026 — used 2026"}, {"id": "bi-56", "sector": "business", "owner": "", "date": "2026-07-18", "checkIn": "2026-07-18", "checkOut": "2026-07-25", "clientType": "paying", "client": "Chekesha", "villa": "Elu + Nalani", "nights": 7, "pricePerNight": null, "platform": "airbnb + direct", "commissionRate": null, "category": "Villa booking", "grossAmount": 27900.0, "netAmount": 27900.0, "currency": "USD", "notes": ""}, {"id": "bi-57", "sector": "business", "owner": "", "date": "2026-07-29", "checkIn": "2026-07-29", "checkOut": "2026-08-08", "clientType": "paying", "client": "Aimee Gallagher", "villa": "Nalani", "nights": 10, "pricePerNight": null, "platform": "isle blue", "commissionRate": null, "category": "Villa booking", "grossAmount": 26000.0, "netAmount": 26000.0, "currency": "USD", "notes": ""}, {"id": "pi-58", "sector": "personal", "date": "2025-08-01", "client": "", "villa": "", "nights": null, "pricePerNight": null, "platform": "", "commissionRate": null, "category": "Salary", "grossAmount": 3000, "netAmount": 3000, "currency": "ILS", "notes": "", "owner": "", "checkIn": "", "checkOut": "", "clientType": "paying"}, {"id": "pi-59", "sector": "personal", "date": "2025-09-01", "client": "", "villa": "", "nights": null, "pricePerNight": null, "platform": "", "commissionRate": null, "category": "Salary", "grossAmount": 3000, "netAmount": 3000, "currency": "ILS", "notes": "", "owner": "", "checkIn": "", "checkOut": "", "clientType": "paying"}, {"id": "pi-60", "sector": "personal", "date": "2025-10-01", "client": "", "villa": "", "nights": null, "pricePerNight": null, "platform": "", "commissionRate": null, "category": "Salary", "grossAmount": 3000, "netAmount": 3000, "currency": "ILS", "notes": "", "owner": "", "checkIn": "", "checkOut": "", "clientType": "paying"}, {"id": "pi-61", "sector": "personal", "date": "2025-11-01", "client": "", "villa": "", "nights": null, "pricePerNight": null, "platform": "", "commissionRate": null, "category": "Salary", "grossAmount": 3000, "netAmount": 3000, "currency": "ILS", "notes": "", "owner": "", "checkIn": "", "checkOut": "", "clientType": "paying"}, {"id": "pi-62", "sector": "personal", "date": "2025-12-01", "client": "", "villa": "", "nights": null, "pricePerNight": null, "platform": "", "commissionRate": null, "category": "Salary", "grossAmount": 3000, "netAmount": 3000, "currency": "ILS", "notes": "", "owner": "", "checkIn": "", "checkOut": "", "clientType": "paying"}, {"id": "pi-63", "sector": "personal", "date": "2026-01-01", "client": "", "villa": "", "nights": null, "pricePerNight": null, "platform": "", "commissionRate": null, "category": "Salary", "grossAmount": 3000, "netAmount": 3000, "currency": "ILS", "notes": "", "owner": "", "checkIn": "", "checkOut": "", "clientType": "paying"}, {"id": "pi-64", "sector": "personal", "date": "2026-02-01", "client": "", "villa": "", "nights": null, "pricePerNight": null, "platform": "", "commissionRate": null, "category": "Salary", "grossAmount": 3000, "netAmount": 3000, "currency": "ILS", "notes": "", "owner": "", "checkIn": "", "checkOut": "", "clientType": "paying"}], "expenseRecords": [{"id": "exp-1", "sector": "business", "date": "2025-08-01", "group": "Magna Pacific", "category": "Mortgage/Rent", "amount": 16000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-2", "sector": "business", "date": "2025-09-01", "group": "Magna Pacific", "category": "Mortgage/Rent", "amount": 15700, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-3", "sector": "business", "date": "2025-10-01", "group": "Magna Pacific", "category": "Mortgage/Rent", "amount": 15250, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-4", "sector": "business", "date": "2025-11-01", "group": "Magna Pacific", "category": "Mortgage/Rent", "amount": 15314, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-5", "sector": "business", "date": "2025-12-01", "group": "Magna Pacific", "category": "Mortgage/Rent", "amount": 14986, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-6", "sector": "business", "date": "2026-01-01", "group": "Magna Pacific", "category": "Mortgage/Rent", "amount": 14900, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-7", "sector": "business", "date": "2026-02-01", "group": "Magna Pacific", "category": "Mortgage/Rent", "amount": 14900, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-8", "sector": "business", "date": "2026-06-01", "group": "Magna Pacific", "category": "Mortgage/Rent", "amount": 14900, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-9", "sector": "business", "date": "2026-09-01", "group": "Magna Pacific", "category": "Mortgage/Rent", "amount": 14600, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-10", "sector": "business", "date": "2025-08-01", "group": "Magna Pacific", "category": "aya water both villas", "amount": 1800, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-11", "sector": "business", "date": "2025-09-01", "group": "Magna Pacific", "category": "aya water both villas", "amount": 957, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-12", "sector": "business", "date": "2025-10-01", "group": "Magna Pacific", "category": "aya water both villas", "amount": 526, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-13", "sector": "business", "date": "2025-11-01", "group": "Magna Pacific", "category": "aya water both villas", "amount": 1000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-14", "sector": "business", "date": "2026-01-01", "group": "Magna Pacific", "category": "aya water both villas", "amount": 2100, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-15", "sector": "business", "date": "2026-02-01", "group": "Magna Pacific", "category": "aya water both villas", "amount": 1200, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-16", "sector": "business", "date": "2026-06-01", "group": "Magna Pacific", "category": "aya water both villas", "amount": 900, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-17", "sector": "business", "date": "2025-09-01", "group": "Magna Pacific", "category": "Electricity", "amount": 1700, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-18", "sector": "business", "date": "2025-10-01", "group": "Magna Pacific", "category": "Electricity", "amount": 1900, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-19", "sector": "business", "date": "2025-11-01", "group": "Magna Pacific", "category": "Electricity", "amount": 1429, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-20", "sector": "business", "date": "2025-12-01", "group": "Magna Pacific", "category": "Electricity", "amount": 1000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-21", "sector": "business", "date": "2026-01-01", "group": "Magna Pacific", "category": "Electricity", "amount": 2000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-22", "sector": "business", "date": "2026-02-01", "group": "Magna Pacific", "category": "Electricity", "amount": 1790, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-23", "sector": "business", "date": "2026-06-01", "group": "Magna Pacific", "category": "Electricity", "amount": 1200, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-24", "sector": "business", "date": "2025-08-01", "group": "Magna Pacific", "category": "ccss", "amount": 1070, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-25", "sector": "business", "date": "2025-09-01", "group": "Magna Pacific", "category": "ccss", "amount": 1070, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-26", "sector": "business", "date": "2025-10-01", "group": "Magna Pacific", "category": "ccss", "amount": 1070, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-27", "sector": "business", "date": "2025-11-01", "group": "Magna Pacific", "category": "ccss", "amount": 1100, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-28", "sector": "business", "date": "2025-12-01", "group": "Magna Pacific", "category": "ccss", "amount": 850, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-29", "sector": "business", "date": "2026-01-01", "group": "Magna Pacific", "category": "ccss", "amount": 780, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-30", "sector": "business", "date": "2026-02-01", "group": "Magna Pacific", "category": "ccss", "amount": 780, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-31", "sector": "business", "date": "2026-06-01", "group": "Magna Pacific", "category": "ccss", "amount": 700, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-32", "sector": "business", "date": "2025-08-01", "group": "Magna Pacific", "category": "accounting", "amount": 340, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-33", "sector": "business", "date": "2025-09-01", "group": "Magna Pacific", "category": "accounting", "amount": 340, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-34", "sector": "business", "date": "2025-10-01", "group": "Magna Pacific", "category": "accounting", "amount": 340, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-35", "sector": "business", "date": "2025-11-01", "group": "Magna Pacific", "category": "accounting", "amount": 340, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-36", "sector": "business", "date": "2025-12-01", "group": "Magna Pacific", "category": "accounting", "amount": 340, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-37", "sector": "business", "date": "2026-01-01", "group": "Magna Pacific", "category": "accounting", "amount": 340, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-38", "sector": "business", "date": "2026-02-01", "group": "Magna Pacific", "category": "accounting", "amount": 340, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-39", "sector": "business", "date": "2026-06-01", "group": "Magna Pacific", "category": "accounting", "amount": 340, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-40", "sector": "business", "date": "2025-08-01", "group": "Magna Pacific", "category": "daiana", "amount": 2000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-41", "sector": "business", "date": "2025-09-01", "group": "Magna Pacific", "category": "daiana", "amount": 2000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-42", "sector": "business", "date": "2025-10-01", "group": "Magna Pacific", "category": "daiana", "amount": 2000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-43", "sector": "business", "date": "2025-11-01", "group": "Magna Pacific", "category": "daiana", "amount": 2000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-44", "sector": "business", "date": "2025-12-01", "group": "Magna Pacific", "category": "daiana", "amount": 4000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-45", "sector": "business", "date": "2026-01-01", "group": "Magna Pacific", "category": "daiana", "amount": 2500, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-46", "sector": "business", "date": "2026-02-01", "group": "Magna Pacific", "category": "daiana", "amount": 2000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-47", "sector": "business", "date": "2026-06-01", "group": "Magna Pacific", "category": "daiana", "amount": 2000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-48", "sector": "business", "date": "2026-07-01", "group": "Magna Pacific", "category": "daiana", "amount": 2000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-49", "sector": "business", "date": "2026-08-01", "group": "Magna Pacific", "category": "daiana", "amount": 2000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-50", "sector": "business", "date": "2026-09-01", "group": "Magna Pacific", "category": "daiana", "amount": 2000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-51", "sector": "business", "date": "2025-08-01", "group": "Magna Pacific", "category": "Internet", "amount": 254, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-52", "sector": "business", "date": "2025-09-01", "group": "Magna Pacific", "category": "Internet", "amount": 254, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-53", "sector": "business", "date": "2025-10-01", "group": "Magna Pacific", "category": "Internet", "amount": 254, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-54", "sector": "business", "date": "2025-11-01", "group": "Magna Pacific", "category": "Internet", "amount": 254, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-55", "sector": "business", "date": "2025-12-01", "group": "Magna Pacific", "category": "Internet", "amount": 254, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-56", "sector": "business", "date": "2026-01-01", "group": "Magna Pacific", "category": "Internet", "amount": 254, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-57", "sector": "business", "date": "2026-02-01", "group": "Magna Pacific", "category": "Internet", "amount": 254, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-58", "sector": "business", "date": "2026-06-01", "group": "Magna Pacific", "category": "Internet", "amount": 254, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-59", "sector": "business", "date": "2026-07-01", "group": "Magna Pacific", "category": "Internet", "amount": 254, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-60", "sector": "business", "date": "2026-08-01", "group": "Magna Pacific", "category": "Internet", "amount": 254, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-61", "sector": "business", "date": "2026-09-01", "group": "Magna Pacific", "category": "Internet", "amount": 254, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-62", "sector": "business", "date": "2025-08-01", "group": "Magna Pacific", "category": "instagram", "amount": 750, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-63", "sector": "business", "date": "2025-09-01", "group": "Magna Pacific", "category": "instagram", "amount": 750, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-64", "sector": "business", "date": "2025-10-01", "group": "Magna Pacific", "category": "instagram", "amount": 750, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-65", "sector": "business", "date": "2025-11-01", "group": "Magna Pacific", "category": "instagram", "amount": 800, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-66", "sector": "business", "date": "2025-12-01", "group": "Magna Pacific", "category": "instagram", "amount": 750, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-67", "sector": "business", "date": "2026-01-01", "group": "Magna Pacific", "category": "instagram", "amount": 750, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-68", "sector": "business", "date": "2026-02-01", "group": "Magna Pacific", "category": "instagram", "amount": 750, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-69", "sector": "business", "date": "2026-06-01", "group": "Magna Pacific", "category": "instagram", "amount": 830, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-70", "sector": "business", "date": "2026-07-01", "group": "Magna Pacific", "category": "instagram", "amount": 400, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-71", "sector": "business", "date": "2026-08-01", "group": "Magna Pacific", "category": "instagram", "amount": 400, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-72", "sector": "business", "date": "2026-09-01", "group": "Magna Pacific", "category": "instagram", "amount": 400, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-73", "sector": "business", "date": "2025-08-01", "group": "Magna Pacific", "category": "gas", "amount": 200, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-74", "sector": "business", "date": "2025-09-01", "group": "Magna Pacific", "category": "gas", "amount": 200, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-75", "sector": "business", "date": "2025-10-01", "group": "Magna Pacific", "category": "gas", "amount": 200, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-76", "sector": "business", "date": "2025-11-01", "group": "Magna Pacific", "category": "gas", "amount": 200, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-77", "sector": "business", "date": "2025-12-01", "group": "Magna Pacific", "category": "gas", "amount": 200, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-78", "sector": "business", "date": "2026-01-01", "group": "Magna Pacific", "category": "gas", "amount": 200, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-79", "sector": "business", "date": "2026-02-01", "group": "Magna Pacific", "category": "gas", "amount": 200, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-80", "sector": "business", "date": "2026-06-01", "group": "Magna Pacific", "category": "gas", "amount": 200, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-81", "sector": "business", "date": "2025-08-01", "group": "Magna Pacific", "category": "workers pay", "amount": 3728, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-82", "sector": "business", "date": "2025-09-01", "group": "Magna Pacific", "category": "workers pay", "amount": 3728, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-83", "sector": "business", "date": "2025-10-01", "group": "Magna Pacific", "category": "workers pay", "amount": 3728, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-84", "sector": "business", "date": "2025-11-01", "group": "Magna Pacific", "category": "workers pay", "amount": 3728, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-85", "sector": "business", "date": "2025-12-01", "group": "Magna Pacific", "category": "workers pay", "amount": 8500, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-86", "sector": "business", "date": "2026-01-01", "group": "Magna Pacific", "category": "workers pay", "amount": 3728, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-87", "sector": "business", "date": "2026-02-01", "group": "Magna Pacific", "category": "workers pay", "amount": 3728, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-88", "sector": "business", "date": "2026-06-01", "group": "Magna Pacific", "category": "workers pay", "amount": 3728, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-89", "sector": "business", "date": "2025-08-01", "group": "Magna Pacific", "category": "gas for car", "amount": 150, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-90", "sector": "business", "date": "2025-09-01", "group": "Magna Pacific", "category": "gas for car", "amount": 150, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-91", "sector": "business", "date": "2025-10-01", "group": "Magna Pacific", "category": "gas for car", "amount": 150, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-92", "sector": "business", "date": "2025-11-01", "group": "Magna Pacific", "category": "gas for car", "amount": 150, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-93", "sector": "business", "date": "2025-12-01", "group": "Magna Pacific", "category": "gas for car", "amount": 150, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-94", "sector": "business", "date": "2026-01-01", "group": "Magna Pacific", "category": "gas for car", "amount": 150, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-95", "sector": "business", "date": "2026-02-01", "group": "Magna Pacific", "category": "gas for car", "amount": 150, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-96", "sector": "business", "date": "2026-06-01", "group": "Magna Pacific", "category": "gas for car", "amount": 150, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-97", "sector": "business", "date": "2025-11-01", "group": "Magna Pacific", "category": "Repairs", "amount": 9000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-98", "sector": "business", "date": "2026-01-01", "group": "Magna Pacific", "category": "Repairs", "amount": 2000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-99", "sector": "business", "date": "2025-09-01", "group": "Magna Pacific", "category": "Other", "amount": 907, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-100", "sector": "business", "date": "2025-10-01", "group": "Magna Pacific", "category": "Other", "amount": 8000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-101", "sector": "business", "date": "2025-11-01", "group": "Magna Pacific", "category": "Other", "amount": 4500, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-102", "sector": "business", "date": "2025-12-01", "group": "Magna Pacific", "category": "Other", "amount": 2000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-103", "sector": "business", "date": "2026-01-01", "group": "Magna Pacific", "category": "Other", "amount": 4000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-104", "sector": "business", "date": "2026-02-01", "group": "Magna Pacific", "category": "Other", "amount": 3000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-105", "sector": "business", "date": "2026-06-01", "group": "Magna Pacific", "category": "Other", "amount": 3000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-106", "sector": "personal", "date": "2025-08-01", "group": "Mal Pais / Hermosa (CR residence)", "category": "rent", "amount": 2600, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-107", "sector": "personal", "date": "2025-09-01", "group": "Mal Pais / Hermosa (CR residence)", "category": "rent", "amount": 2600, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-108", "sector": "personal", "date": "2025-10-01", "group": "Mal Pais / Hermosa (CR residence)", "category": "rent", "amount": 1400, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-109", "sector": "personal", "date": "2025-11-01", "group": "Mal Pais / Hermosa (CR residence)", "category": "rent", "amount": 1400, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-110", "sector": "personal", "date": "2025-12-01", "group": "Mal Pais / Hermosa (CR residence)", "category": "rent", "amount": 1400, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-111", "sector": "personal", "date": "2026-01-01", "group": "Mal Pais / Hermosa (CR residence)", "category": "rent", "amount": 1400, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-112", "sector": "personal", "date": "2026-02-01", "group": "Mal Pais / Hermosa (CR residence)", "category": "rent", "amount": 1400, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-113", "sector": "personal", "date": "2026-06-01", "group": "Mal Pais / Hermosa (CR residence)", "category": "rent", "amount": 1200, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-114", "sector": "personal", "date": "2025-08-01", "group": "Mal Pais / Hermosa (CR residence)", "category": "condominum payment", "amount": 260, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-115", "sector": "personal", "date": "2025-09-01", "group": "Mal Pais / Hermosa (CR residence)", "category": "condominum payment", "amount": 260, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-116", "sector": "personal", "date": "2025-10-01", "group": "Mal Pais / Hermosa (CR residence)", "category": "condominum payment", "amount": 260, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-117", "sector": "personal", "date": "2025-08-01", "group": "Mal Pais / Hermosa (CR residence)", "category": "water", "amount": 112, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-118", "sector": "personal", "date": "2025-09-01", "group": "Mal Pais / Hermosa (CR residence)", "category": "water", "amount": 58, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-119", "sector": "personal", "date": "2025-08-01", "group": "Mal Pais / Hermosa (CR residence)", "category": "electricity", "amount": 424, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-120", "sector": "personal", "date": "2025-09-01", "group": "Mal Pais / Hermosa (CR residence)", "category": "electricity", "amount": 371, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-121", "sector": "personal", "date": "2025-10-01", "group": "Mal Pais / Hermosa (CR residence)", "category": "electricity", "amount": 270, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-122", "sector": "personal", "date": "2025-11-01", "group": "Mal Pais / Hermosa (CR residence)", "category": "electricity", "amount": 40, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-123", "sector": "personal", "date": "2025-08-01", "group": "Mal Pais / Hermosa (CR residence)", "category": "internet", "amount": 54, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-124", "sector": "personal", "date": "2025-09-01", "group": "Mal Pais / Hermosa (CR residence)", "category": "internet", "amount": 54, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-125", "sector": "personal", "date": "2025-10-01", "group": "Mal Pais / Hermosa (CR residence)", "category": "internet", "amount": 54, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-126", "sector": "personal", "date": "2025-11-01", "group": "Mal Pais / Hermosa (CR residence)", "category": "Other", "amount": 1000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-127", "sector": "personal", "date": "2025-12-01", "group": "Mal Pais / Hermosa (CR residence)", "category": "Other", "amount": 1000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-128", "sector": "personal", "date": "2026-01-01", "group": "Mal Pais / Hermosa (CR residence)", "category": "Other", "amount": 1000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-129", "sector": "personal", "date": "2026-06-01", "group": "Mal Pais / Hermosa (CR residence)", "category": "Other", "amount": 600, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-130", "sector": "personal", "date": "2025-08-01", "group": "Israel", "category": "rent", "amount": 1500, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-131", "sector": "personal", "date": "2025-09-01", "group": "Israel", "category": "rent", "amount": 1500, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-132", "sector": "personal", "date": "2025-10-01", "group": "Israel", "category": "rent", "amount": 1500, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-133", "sector": "personal", "date": "2025-11-01", "group": "Israel", "category": "rent", "amount": 1700, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-134", "sector": "personal", "date": "2025-12-01", "group": "Israel", "category": "rent", "amount": 1700, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-135", "sector": "personal", "date": "2026-01-01", "group": "Israel", "category": "rent", "amount": 1700, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-136", "sector": "personal", "date": "2026-02-01", "group": "Israel", "category": "rent", "amount": 1700, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-137", "sector": "personal", "date": "2026-06-01", "group": "Israel", "category": "rent", "amount": 2500, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-138", "sector": "personal", "date": "2026-07-01", "group": "Israel", "category": "rent", "amount": 2500, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-139", "sector": "personal", "date": "2026-08-01", "group": "Israel", "category": "rent", "amount": 2500, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-140", "sector": "personal", "date": "2026-09-01", "group": "Israel", "category": "rent", "amount": 2500, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-141", "sector": "personal", "date": "2025-08-01", "group": "Israel", "category": "electricity", "amount": 100, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-142", "sector": "personal", "date": "2025-09-01", "group": "Israel", "category": "electricity", "amount": 100, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-143", "sector": "personal", "date": "2025-10-01", "group": "Israel", "category": "electricity", "amount": 100, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-144", "sector": "personal", "date": "2026-06-01", "group": "Israel", "category": "electricity", "amount": 100, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-145", "sector": "personal", "date": "2026-07-01", "group": "Israel", "category": "electricity", "amount": 300, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-146", "sector": "personal", "date": "2026-08-01", "group": "Israel", "category": "electricity", "amount": 300, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-147", "sector": "personal", "date": "2026-09-01", "group": "Israel", "category": "electricity", "amount": 300, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-148", "sector": "personal", "date": "2025-08-01", "group": "Israel", "category": "car gasoline", "amount": 400, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-149", "sector": "personal", "date": "2025-09-01", "group": "Israel", "category": "car gasoline", "amount": 400, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-150", "sector": "personal", "date": "2025-10-01", "group": "Israel", "category": "car gasoline", "amount": 400, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-151", "sector": "personal", "date": "2025-11-01", "group": "Israel", "category": "car gasoline", "amount": 200, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-152", "sector": "personal", "date": "2025-12-01", "group": "Israel", "category": "car gasoline", "amount": 200, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-153", "sector": "personal", "date": "2026-01-01", "group": "Israel", "category": "car gasoline", "amount": 200, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-154", "sector": "personal", "date": "2026-02-01", "group": "Israel", "category": "car gasoline", "amount": 200, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-155", "sector": "personal", "date": "2026-06-01", "group": "Israel", "category": "car gasoline", "amount": 200, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-156", "sector": "personal", "date": "2026-07-01", "group": "Israel", "category": "car gasoline", "amount": 200, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-157", "sector": "personal", "date": "2026-08-01", "group": "Israel", "category": "car gasoline", "amount": 200, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-158", "sector": "personal", "date": "2026-09-01", "group": "Israel", "category": "car gasoline", "amount": 200, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-159", "sector": "personal", "date": "2025-08-01", "group": "Israel", "category": "food", "amount": 1000, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-160", "sector": "personal", "date": "2025-09-01", "group": "Israel", "category": "food", "amount": 1000, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-161", "sector": "personal", "date": "2025-10-01", "group": "Israel", "category": "food", "amount": 1000, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-162", "sector": "personal", "date": "2025-11-01", "group": "Israel", "category": "food", "amount": 1000, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-163", "sector": "personal", "date": "2025-12-01", "group": "Israel", "category": "food", "amount": 1000, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-164", "sector": "personal", "date": "2026-01-01", "group": "Israel", "category": "food", "amount": 1000, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-165", "sector": "personal", "date": "2026-02-01", "group": "Israel", "category": "food", "amount": 1000, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-166", "sector": "personal", "date": "2026-06-01", "group": "Israel", "category": "food", "amount": 1000, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-167", "sector": "personal", "date": "2026-07-01", "group": "Israel", "category": "food", "amount": 1000, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-168", "sector": "personal", "date": "2026-08-01", "group": "Israel", "category": "food", "amount": 1000, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-169", "sector": "personal", "date": "2026-09-01", "group": "Israel", "category": "food", "amount": 1000, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-170", "sector": "personal", "date": "2026-06-01", "group": "Israel", "category": "Other", "amount": 1000, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-171", "sector": "personal", "date": "2026-07-01", "group": "Israel", "category": "Other", "amount": 1000, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-172", "sector": "personal", "date": "2026-08-01", "group": "Israel", "category": "Other", "amount": 1000, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-173", "sector": "personal", "date": "2026-09-01", "group": "Israel", "category": "Other", "amount": 1000, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-174", "sector": "personal", "date": "2025-08-01", "group": "Israel", "category": "loans", "amount": 1756, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-175", "sector": "personal", "date": "2025-09-01", "group": "Israel", "category": "loans", "amount": 1756, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-176", "sector": "personal", "date": "2025-10-01", "group": "Israel", "category": "loans", "amount": 1756, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-177", "sector": "personal", "date": "2025-11-01", "group": "Israel", "category": "loans", "amount": 1756, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-178", "sector": "personal", "date": "2025-12-01", "group": "Israel", "category": "loans", "amount": 1756, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-179", "sector": "personal", "date": "2026-01-01", "group": "Israel", "category": "loans", "amount": 1756, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-180", "sector": "personal", "date": "2026-02-01", "group": "Israel", "category": "loans", "amount": 1756, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-181", "sector": "personal", "date": "2026-06-01", "group": "Israel", "category": "loans", "amount": 1756, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-182", "sector": "personal", "date": "2026-07-01", "group": "Israel", "category": "loans", "amount": 1756, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-183", "sector": "personal", "date": "2026-08-01", "group": "Israel", "category": "loans", "amount": 1756, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-184", "sector": "personal", "date": "2026-09-01", "group": "Israel", "category": "loans", "amount": 1756, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-185", "sector": "personal", "date": "2025-08-01", "group": "Israel", "category": "child care", "amount": 290, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-186", "sector": "personal", "date": "2025-09-01", "group": "Israel", "category": "child care", "amount": 290, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-187", "sector": "personal", "date": "2025-10-01", "group": "Israel", "category": "child care", "amount": 290, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-188", "sector": "personal", "date": "2025-11-01", "group": "Israel", "category": "child care", "amount": 290, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-189", "sector": "personal", "date": "2025-12-01", "group": "Israel", "category": "child care", "amount": 290, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-190", "sector": "personal", "date": "2026-01-01", "group": "Israel", "category": "child care", "amount": 290, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-191", "sector": "personal", "date": "2025-08-01", "group": "Israel", "category": "nitay school", "amount": 1000, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-192", "sector": "personal", "date": "2025-09-01", "group": "Israel", "category": "nitay school", "amount": 1000, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-193", "sector": "personal", "date": "2025-10-01", "group": "Israel", "category": "nitay school", "amount": 1000, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-194", "sector": "personal", "date": "2025-11-01", "group": "Israel", "category": "nitay school", "amount": 1000, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-195", "sector": "personal", "date": "2025-12-01", "group": "Israel", "category": "nitay school", "amount": 1000, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-196", "sector": "personal", "date": "2026-01-01", "group": "Israel", "category": "nitay school", "amount": 1000, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-197", "sector": "personal", "date": "2026-06-01", "group": "Israel", "category": "nitay school", "amount": 830, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-198", "sector": "personal", "date": "2026-07-01", "group": "Israel", "category": "nitay school", "amount": 1000, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-199", "sector": "personal", "date": "2026-08-01", "group": "Israel", "category": "nitay school", "amount": 1000, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-200", "sector": "personal", "date": "2026-09-01", "group": "Israel", "category": "nitay school", "amount": 1000, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-201", "sector": "business", "date": "2025-08-01", "group": "Suppliers", "category": "terra eqipos", "amount": 1000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-202", "sector": "business", "date": "2025-09-01", "group": "Suppliers", "category": "terra eqipos", "amount": 1000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-203", "sector": "business", "date": "2025-10-01", "group": "Suppliers", "category": "terra eqipos", "amount": 1000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-204", "sector": "business", "date": "2025-11-01", "group": "Suppliers", "category": "terra eqipos", "amount": 1000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-205", "sector": "business", "date": "2025-12-01", "group": "Suppliers", "category": "terra eqipos", "amount": 1000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-206", "sector": "business", "date": "2026-01-01", "group": "Suppliers", "category": "terra eqipos", "amount": 1000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-207", "sector": "business", "date": "2026-02-01", "group": "Suppliers", "category": "terra eqipos", "amount": 1000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-208", "sector": "business", "date": "2025-08-01", "group": "Suppliers", "category": "san miguel", "amount": 500, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-209", "sector": "business", "date": "2025-09-01", "group": "Suppliers", "category": "san miguel", "amount": 500, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-210", "sector": "business", "date": "2025-10-01", "group": "Suppliers", "category": "san miguel", "amount": 500, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-211", "sector": "business", "date": "2025-11-01", "group": "Suppliers", "category": "san miguel", "amount": 500, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-212", "sector": "business", "date": "2025-12-01", "group": "Suppliers", "category": "san miguel", "amount": 500, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-213", "sector": "business", "date": "2026-01-01", "group": "Suppliers", "category": "san miguel", "amount": 500, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-214", "sector": "business", "date": "2026-02-01", "group": "Suppliers", "category": "san miguel", "amount": 500, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-215", "sector": "business", "date": "2026-06-01", "group": "Suppliers", "category": "san miguel", "amount": 500, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-216", "sector": "business", "date": "2026-07-01", "group": "Suppliers", "category": "san miguel", "amount": 500, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-217", "sector": "business", "date": "2026-08-01", "group": "Suppliers", "category": "san miguel", "amount": 500, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-218", "sector": "business", "date": "2026-09-01", "group": "Suppliers", "category": "san miguel", "amount": 500, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-219", "sector": "business", "date": "2025-10-01", "group": "Suppliers", "category": "rafa", "amount": 2000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-220", "sector": "business", "date": "2026-01-01", "group": "Suppliers", "category": "rafa", "amount": 2000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-221", "sector": "business", "date": "2026-02-01", "group": "Suppliers", "category": "rafa", "amount": 2000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-222", "sector": "business", "date": "2026-06-01", "group": "Suppliers", "category": "rafa", "amount": 1000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-223", "sector": "business", "date": "2026-07-01", "group": "Suppliers", "category": "rafa", "amount": 1000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-224", "sector": "business", "date": "2026-08-01", "group": "Suppliers", "category": "rafa", "amount": 1000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-225", "sector": "business", "date": "2026-09-01", "group": "Suppliers", "category": "rafa", "amount": 1000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-226", "sector": "business", "date": "2025-09-01", "group": "Suppliers", "category": "concept", "amount": 2000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-227", "sector": "business", "date": "2025-09-01", "group": "Suppliers", "category": "ac", "amount": 2000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-228", "sector": "business", "date": "2026-01-01", "group": "Suppliers", "category": "ac", "amount": 2000, "currency": "USD", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-229", "sector": "personal", "date": "2025-11-01", "group": "Children", "category": "School / College Expenses", "amount": 650, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-230", "sector": "personal", "date": "2025-12-01", "group": "Children", "category": "School / College Expenses", "amount": 650, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-231", "sector": "personal", "date": "2026-01-01", "group": "Children", "category": "School / College Expenses", "amount": 650, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-232", "sector": "personal", "date": "2026-02-01", "group": "Children", "category": "School / College Expenses", "amount": 650, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-233", "sector": "personal", "date": "2026-09-01", "group": "Children", "category": "School / College Expenses", "amount": 250, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-234", "sector": "personal", "date": "2026-01-01", "group": "Children", "category": "Gifts", "amount": 200, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}, {"id": "exp-235", "sector": "personal", "date": "2025-11-01", "group": "Children", "category": "Other", "amount": 1000, "currency": "ILS", "notes": "", "owner": "", "recurringId": ""}], "paymentRecords": [], "recurringExpenses": [], "settings": {"ilsPerUsd": 3.5}}</script>
-<script src="app.js?v=2"></script>
+<script id="seed-data" type="application/json">{
+  "version": 1,
+  "updatedAt": "2026-08-25T11:30:26.668197",
+  "incomeRecords": [
+    {
+      "id": "bi-1",
+      "sector": "business",
+      "date": "2023-12-01",
+      "client": "satin family",
+      "villa": "Elu",
+      "nights": 9,
+      "pricePerNight": 5400,
+      "platform": "travel pioneers",
+      "commissionRate": 0.05,
+      "category": "הזמנת וילה",
+      "grossAmount": 54918,
+      "netAmount": 54918,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 22/12-30/12"
+    },
+    {
+      "id": "bi-2",
+      "sector": "business",
+      "date": "2023-12-01",
+      "client": "mario",
+      "villa": "Nalani",
+      "nights": 10,
+      "pricePerNight": 6000,
+      "platform": "yuli",
+      "commissionRate": 0.05,
+      "category": "הזמנת וילה",
+      "grossAmount": 57000,
+      "netAmount": 57000,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 27/12-6/1 | מע\"מ: no"
+    },
+    {
+      "id": "bi-3",
+      "sector": "business",
+      "date": "2023-12-01",
+      "client": "jamie",
+      "villa": "Elu",
+      "nights": 2,
+      "pricePerNight": 2000,
+      "platform": "direct",
+      "commissionRate": null,
+      "category": "הזמנת וילה",
+      "grossAmount": 4000,
+      "netAmount": 4000,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 31/12-2/1 | מע\"מ: no"
+    },
+    {
+      "id": "bi-4",
+      "sector": "business",
+      "date": "2025-01-01",
+      "client": "clair duddle",
+      "villa": "Elu",
+      "nights": 6,
+      "pricePerNight": 1500,
+      "platform": "airbnb",
+      "commissionRate": 0.15,
+      "category": "הזמנת וילה",
+      "grossAmount": 8694,
+      "netAmount": 8694,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 29/1-4/2"
+    },
+    {
+      "id": "bi-5",
+      "sector": "business",
+      "date": "2025-02-01",
+      "client": "anthony gustin",
+      "villa": "Elu",
+      "nights": 3,
+      "pricePerNight": 1000,
+      "platform": "airbnb",
+      "commissionRate": 0.15,
+      "category": "הזמנת וילה",
+      "grossAmount": 2881,
+      "netAmount": 2881,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 21-24/2"
+    },
+    {
+      "id": "bi-6",
+      "sector": "business",
+      "date": "2025-02-01",
+      "client": "jennifer barlettani",
+      "villa": "Elu",
+      "nights": 3,
+      "pricePerNight": 1800,
+      "platform": "airbnb",
+      "commissionRate": 0.15,
+      "category": "הזמנת וילה",
+      "grossAmount": 6102,
+      "netAmount": 6102,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 29/2-3/3"
+    },
+    {
+      "id": "bi-7",
+      "sector": "business",
+      "date": "2025-03-01",
+      "client": "rudy topete",
+      "villa": "Nalani",
+      "nights": 4,
+      "pricePerNight": 2939,
+      "platform": "airbnb",
+      "commissionRate": 0.15,
+      "category": "הזמנת וילה",
+      "grossAmount": 11756,
+      "netAmount": 11756,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 10/3-14/03"
+    },
+    {
+      "id": "bi-8",
+      "sector": "business",
+      "date": "2025-03-01",
+      "client": "mathilda vial",
+      "villa": "Elu",
+      "nights": 3,
+      "pricePerNight": 2744,
+      "platform": "airbnb",
+      "commissionRate": 0.15,
+      "category": "הזמנת וילה",
+      "grossAmount": 8232,
+      "netAmount": 8232,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 14-17/3"
+    },
+    {
+      "id": "bi-9",
+      "sector": "business",
+      "date": "2025-03-01",
+      "client": "mike sherill",
+      "villa": "Elu",
+      "nights": 6,
+      "pricePerNight": 2303,
+      "platform": "airbnb",
+      "commissionRate": 0.15,
+      "category": "הזמנת וילה",
+      "grossAmount": 13818,
+      "netAmount": 13818,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 23-26/3"
+    },
+    {
+      "id": "bi-10",
+      "sector": "business",
+      "date": "2025-04-01",
+      "client": "austin vance",
+      "villa": "Nalani",
+      "nights": 6,
+      "pricePerNight": 2083,
+      "platform": "direct",
+      "commissionRate": null,
+      "category": "הזמנת וילה",
+      "grossAmount": 12500,
+      "netAmount": 12500,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 8-14/4"
+    },
+    {
+      "id": "bi-11",
+      "sector": "business",
+      "date": "2025-05-01",
+      "client": "jamie",
+      "villa": "Nalani",
+      "nights": 10,
+      "pricePerNight": 1800,
+      "platform": "direct",
+      "commissionRate": null,
+      "category": "הזמנת וילה",
+      "grossAmount": 18000,
+      "netAmount": 18000,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 2/5-12/5"
+    },
+    {
+      "id": "bi-12",
+      "sector": "business",
+      "date": "2025-05-01",
+      "client": "jamie",
+      "villa": "Elu",
+      "nights": 4,
+      "pricePerNight": 1400,
+      "platform": "direct",
+      "commissionRate": null,
+      "category": "הזמנת וילה",
+      "grossAmount": 5600,
+      "netAmount": 5600,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 8/5-12/5"
+    },
+    {
+      "id": "bi-13",
+      "sector": "business",
+      "date": "2025-04-01",
+      "client": "victor almeida",
+      "villa": "Elu",
+      "nights": 9,
+      "pricePerNight": 2088,
+      "platform": "airbnb",
+      "commissionRate": 0.15,
+      "category": "הזמנת וילה",
+      "grossAmount": 18424,
+      "netAmount": 18424,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 9-18/4"
+    },
+    {
+      "id": "bi-14",
+      "sector": "business",
+      "date": "2025-05-01",
+      "client": "shassity stevenson",
+      "villa": "Elu",
+      "nights": 4,
+      "pricePerNight": 2100,
+      "platform": "airbnb",
+      "commissionRate": 0.15,
+      "category": "הזמנת וילה",
+      "grossAmount": 8232,
+      "netAmount": 8232,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 24-28/5"
+    },
+    {
+      "id": "bi-15",
+      "sector": "business",
+      "date": "2025-07-01",
+      "client": "patrick callahan",
+      "villa": "Elu",
+      "nights": 14,
+      "pricePerNight": 2500,
+      "platform": "direct",
+      "commissionRate": null,
+      "category": "הזמנת וילה",
+      "grossAmount": 35000,
+      "netAmount": 35000,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 7/7-21/7"
+    },
+    {
+      "id": "bi-16",
+      "sector": "business",
+      "date": "2025-08-01",
+      "client": "evan",
+      "villa": "Elu",
+      "nights": 12,
+      "pricePerNight": 2500,
+      "platform": "origin",
+      "commissionRate": null,
+      "category": "הזמנת וילה",
+      "grossAmount": 33900,
+      "netAmount": 33900,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 22//7-3/8"
+    },
+    {
+      "id": "bi-17",
+      "sector": "business",
+      "date": "2025-08-01",
+      "client": "beatrice",
+      "villa": "Elu",
+      "nights": 15,
+      "pricePerNight": 1821,
+      "platform": "airbnb",
+      "commissionRate": 0.15,
+      "category": "הזמנת וילה",
+      "grossAmount": 27315,
+      "netAmount": 27315,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 15/8-30/8"
+    },
+    {
+      "id": "bi-18",
+      "sector": "business",
+      "date": "2025-07-01",
+      "client": "hadas",
+      "villa": "Nalani",
+      "nights": 7,
+      "pricePerNight": 1214,
+      "platform": "direct",
+      "commissionRate": null,
+      "category": "הזמנת וילה",
+      "grossAmount": 8500,
+      "netAmount": 8500,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 7-14/7"
+    },
+    {
+      "id": "bi-19",
+      "sector": "business",
+      "date": "2025-10-01",
+      "client": "roberto gamboa",
+      "villa": "Elu + Nalani",
+      "nights": 3,
+      "pricePerNight": null,
+      "platform": "direct",
+      "commissionRate": null,
+      "category": "הזמנת וילה",
+      "grossAmount": 10000,
+      "netAmount": 10000,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 24-27/10"
+    },
+    {
+      "id": "bi-20",
+      "sector": "business",
+      "date": "2025-10-01",
+      "client": "juliana mulholland",
+      "villa": "Elu",
+      "nights": 3,
+      "pricePerNight": null,
+      "platform": "journey",
+      "commissionRate": 0.15,
+      "category": "הזמנת וילה",
+      "grossAmount": 8475,
+      "netAmount": 8475,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 31/10-3/11"
+    },
+    {
+      "id": "bi-21",
+      "sector": "business",
+      "date": "2025-11-01",
+      "client": "mike",
+      "villa": "Elu",
+      "nights": 4,
+      "pricePerNight": null,
+      "platform": "airbnb",
+      "commissionRate": null,
+      "category": "הזמנת וילה",
+      "grossAmount": 12256,
+      "netAmount": 12256,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 25-29/11"
+    },
+    {
+      "id": "bi-22",
+      "sector": "business",
+      "date": "2025-12-01",
+      "client": "darius",
+      "villa": "Elu",
+      "nights": 7,
+      "pricePerNight": null,
+      "platform": "frederick soutbys",
+      "commissionRate": 0.1,
+      "category": "הזמנת וילה",
+      "grossAmount": 20000,
+      "netAmount": 20000,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 2012-12-05 00:00:00"
+    },
+    {
+      "id": "bi-23",
+      "sector": "business",
+      "date": "2025-12-01",
+      "client": "jessica and david sawin",
+      "villa": "Nalani",
+      "nights": 3,
+      "pricePerNight": null,
+      "platform": "direct",
+      "commissionRate": null,
+      "category": "הזמנת וילה",
+      "grossAmount": 8475,
+      "netAmount": 8475,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 24-27/12"
+    },
+    {
+      "id": "bi-24",
+      "sector": "business",
+      "date": "2025-12-01",
+      "client": "mario",
+      "villa": "Nalani",
+      "nights": 10,
+      "pricePerNight": null,
+      "platform": "rinat",
+      "commissionRate": 0.05,
+      "category": "הזמנת וילה",
+      "grossAmount": 96000,
+      "netAmount": 96000,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 27/12-8/01"
+    },
+    {
+      "id": "bi-25",
+      "sector": "business",
+      "date": "2025-12-01",
+      "client": "hue lane",
+      "villa": "Elu",
+      "nights": 14,
+      "pricePerNight": null,
+      "platform": "freddie luxery travel",
+      "commissionRate": 0.15,
+      "category": "הזמנת וילה",
+      "grossAmount": 78120,
+      "netAmount": 78120,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 20/12-3/01"
+    },
+    {
+      "id": "bi-26",
+      "sector": "business",
+      "date": "2025-01-01",
+      "client": "jack mallers",
+      "villa": "Elu",
+      "nights": 24,
+      "pricePerNight": null,
+      "platform": "airbnb+ direct",
+      "commissionRate": null,
+      "category": "הזמנת וילה",
+      "grossAmount": 60000,
+      "netAmount": 60000,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 10/01-02/02/2025"
+    },
+    {
+      "id": "bi-27",
+      "sector": "business",
+      "date": "2026-02-01",
+      "client": "darius",
+      "villa": "Nalani",
+      "nights": 28,
+      "pricePerNight": null,
+      "platform": "direct",
+      "commissionRate": null,
+      "category": "הזמנת וילה",
+      "grossAmount": 60000,
+      "netAmount": 58000,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 10/02-10/03"
+    },
+    {
+      "id": "bi-28",
+      "sector": "business",
+      "date": "2025-03-01",
+      "client": "Giacomo Maroni",
+      "villa": "Nalani",
+      "nights": 7,
+      "pricePerNight": null,
+      "platform": "airbnb",
+      "commissionRate": null,
+      "category": "הזמנת וילה",
+      "grossAmount": 18000,
+      "netAmount": 18000,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 15-22/03/2025"
+    },
+    {
+      "id": "bi-29",
+      "sector": "business",
+      "date": "2025-04-01",
+      "client": "leo",
+      "villa": "Nalani",
+      "nights": 7,
+      "pricePerNight": null,
+      "platform": "romi",
+      "commissionRate": null,
+      "category": "הזמנת וילה",
+      "grossAmount": 10000,
+      "netAmount": 10000,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 10-17/04/2025 | עמלה: leo"
+    },
+    {
+      "id": "bi-30",
+      "sector": "business",
+      "date": "2025-04-01",
+      "client": "Jose Gonzalez",
+      "villa": "Elu",
+      "nights": 5,
+      "pricePerNight": null,
+      "platform": "airbnb",
+      "commissionRate": null,
+      "category": "הזמנת וילה",
+      "grossAmount": 12000,
+      "netAmount": 12000,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 11-16/04/2025"
+    },
+    {
+      "id": "bi-31",
+      "sector": "business",
+      "date": "2026-05-01",
+      "client": "Rachel Day",
+      "villa": "Elu",
+      "nights": 4,
+      "pricePerNight": null,
+      "platform": "airbnb",
+      "commissionRate": null,
+      "category": "הזמנת וילה",
+      "grossAmount": 6500,
+      "netAmount": 6500,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 18-22/05"
+    },
+    {
+      "id": "bi-32",
+      "sector": "business",
+      "date": "2026-06-01",
+      "client": "grace byrd",
+      "villa": "Elu",
+      "nights": 6,
+      "pricePerNight": null,
+      "platform": "vrbo",
+      "commissionRate": null,
+      "category": "הזמנת וילה",
+      "grossAmount": 15691,
+      "netAmount": 15691,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 30/06-6/07"
+    },
+    {
+      "id": "bi-33",
+      "sector": "business",
+      "date": "2026-07-01",
+      "client": "joe",
+      "villa": "Elu",
+      "nights": 3,
+      "pricePerNight": null,
+      "platform": "direct",
+      "commissionRate": null,
+      "category": "הזמנת וילה",
+      "grossAmount": 3000,
+      "netAmount": 3000,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 14-17 /07"
+    },
+    {
+      "id": "bi-34",
+      "sector": "business",
+      "date": "2026-07-01",
+      "client": "Koby Conrad",
+      "villa": "Nalani",
+      "nights": 7,
+      "pricePerNight": null,
+      "platform": "airbnb",
+      "commissionRate": null,
+      "category": "הזמנת וילה",
+      "grossAmount": 16000,
+      "netAmount": 16000,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 19-26/07"
+    },
+    {
+      "id": "bi-35",
+      "sector": "business",
+      "date": "2025-07-01",
+      "client": "davis",
+      "villa": "Elu",
+      "nights": 3,
+      "pricePerNight": null,
+      "platform": "direct",
+      "commissionRate": null,
+      "category": "הזמנת וילה",
+      "grossAmount": 3000,
+      "netAmount": 3000,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 25-28/7/2025"
+    },
+    {
+      "id": "bi-36",
+      "sector": "business",
+      "date": "2026-08-01",
+      "client": "Clara",
+      "villa": "Elu",
+      "nights": 4,
+      "pricePerNight": null,
+      "platform": "airbnb",
+      "commissionRate": null,
+      "category": "הזמנת וילה",
+      "grossAmount": 7000,
+      "netAmount": 7000,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 18-22/08 | עמלה: cancelled last minute"
+    },
+    {
+      "id": "bi-37",
+      "sector": "business",
+      "date": "2026-11-01",
+      "client": "rishi bajaj",
+      "villa": "Nalani",
+      "nights": 38,
+      "pricePerNight": null,
+      "platform": "lee",
+      "commissionRate": null,
+      "category": "הזמנת וילה",
+      "grossAmount": 77292,
+      "netAmount": 72500,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 06/11-15/12 | עמלה: עמלה בסכום קבוע: 4500"
+    },
+    {
+      "id": "bi-38",
+      "sector": "business",
+      "date": "2026-11-01",
+      "client": "tiffaney and tom",
+      "villa": "Elu",
+      "nights": 5,
+      "pricePerNight": null,
+      "platform": "brett",
+      "commissionRate": 0.1,
+      "category": "הזמנת וילה",
+      "grossAmount": 14690,
+      "netAmount": 13390,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 18-23/11"
+    },
+    {
+      "id": "bi-39",
+      "sector": "business",
+      "date": "2026-12-01",
+      "client": "maria fernendaz",
+      "villa": "Nalani",
+      "nights": 7,
+      "pricePerNight": null,
+      "platform": "my private villas",
+      "commissionRate": 0.15,
+      "category": "הזמנת וילה",
+      "grossAmount": 56048,
+      "netAmount": 48608,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 19-26/12"
+    },
+    {
+      "id": "bi-40",
+      "sector": "business",
+      "date": "2026-12-01",
+      "client": "adam kelly",
+      "villa": "Elu",
+      "nights": 5,
+      "pricePerNight": null,
+      "platform": "frederick soutbys",
+      "commissionRate": 0.1,
+      "category": "הזמנת וילה",
+      "grossAmount": 22600,
+      "netAmount": 20600,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 19-24/12"
+    },
+    {
+      "id": "bi-41",
+      "sector": "business",
+      "date": "2026-12-01",
+      "client": "vip clients new years",
+      "villa": "Elu + Nalani",
+      "nights": 10,
+      "pricePerNight": null,
+      "platform": "journey",
+      "commissionRate": 0.15,
+      "category": "הזמנת וילה",
+      "grossAmount": 181000,
+      "netAmount": 181000,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 26/12-5/1"
+    },
+    {
+      "id": "bi-42",
+      "sector": "business",
+      "date": "2026-11-01",
+      "client": "Yasmine",
+      "villa": "Elu",
+      "nights": 7,
+      "pricePerNight": null,
+      "platform": "airbnb",
+      "commissionRate": null,
+      "category": "הזמנת וילה",
+      "grossAmount": 21800,
+      "netAmount": 21800,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 23/11-30/11"
+    },
+    {
+      "id": "bi-43",
+      "sector": "business",
+      "date": "2026-01-01",
+      "client": "mario",
+      "villa": "Nalani",
+      "nights": 7,
+      "pricePerNight": null,
+      "platform": "direct",
+      "commissionRate": null,
+      "category": "הזמנת וילה",
+      "grossAmount": 28000,
+      "netAmount": 28000,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 7/1-14/1"
+    },
+    {
+      "id": "bi-44",
+      "sector": "business",
+      "date": "2026-01-01",
+      "client": "Axel",
+      "villa": "Elu",
+      "nights": 13,
+      "pricePerNight": null,
+      "platform": "lee",
+      "commissionRate": 0.1,
+      "category": "הזמנת וילה",
+      "grossAmount": 27900,
+      "netAmount": 25000,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 5/1-18/01"
+    },
+    {
+      "id": "bi-45",
+      "sector": "business",
+      "date": "2026-03-01",
+      "client": "nofar",
+      "villa": "Nalani",
+      "nights": 6,
+      "pricePerNight": null,
+      "platform": "direct",
+      "commissionRate": null,
+      "category": "הזמנת וילה",
+      "grossAmount": 22000,
+      "netAmount": 22000,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 30/03-6/04"
+    },
+    {
+      "id": "bi-46",
+      "sector": "business",
+      "date": "2026-01-01",
+      "client": "Yan",
+      "villa": "Nalani",
+      "nights": 22,
+      "pricePerNight": null,
+      "platform": "direct",
+      "commissionRate": null,
+      "category": "הזמנת וילה",
+      "grossAmount": 65000,
+      "netAmount": 65000,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 28/01-21/02"
+    },
+    {
+      "id": "bi-47",
+      "sector": "business",
+      "date": "2026-02-01",
+      "client": "Jonathan",
+      "villa": "Elu",
+      "nights": 3,
+      "pricePerNight": null,
+      "platform": "airbnb",
+      "commissionRate": null,
+      "category": "הזמנת וילה",
+      "grossAmount": 7497,
+      "netAmount": 8600,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 12-15/02/2026"
+    },
+    {
+      "id": "bi-48",
+      "sector": "business",
+      "date": "2026-02-01",
+      "client": "Mariana",
+      "villa": "Elu",
+      "nights": 9,
+      "pricePerNight": null,
+      "platform": "airbnb",
+      "commissionRate": null,
+      "category": "הזמנת וילה",
+      "grossAmount": 21929,
+      "netAmount": 25301,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 15-24/02/2026"
+    },
+    {
+      "id": "bi-49",
+      "sector": "business",
+      "date": "2026-03-01",
+      "client": "chase",
+      "villa": "Elu",
+      "nights": 4,
+      "pricePerNight": null,
+      "platform": "airbnb",
+      "commissionRate": 0.15,
+      "category": "הזמנת וילה",
+      "grossAmount": 9707,
+      "netAmount": 11256,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 15-19/03"
+    },
+    {
+      "id": "bi-50",
+      "sector": "business",
+      "date": "2026-03-01",
+      "client": "mark",
+      "villa": "Elu",
+      "nights": 5,
+      "pricePerNight": null,
+      "platform": "airbnb",
+      "commissionRate": null,
+      "category": "הזמנת וילה",
+      "grossAmount": 11936,
+      "netAmount": 11936,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 16-21/03"
+    },
+    {
+      "id": "bi-51",
+      "sector": "business",
+      "date": "2026-04-01",
+      "client": "offer",
+      "villa": "Elu",
+      "nights": 8,
+      "pricePerNight": null,
+      "platform": "airbnb",
+      "commissionRate": null,
+      "category": "הזמנת וילה",
+      "grossAmount": 13970,
+      "netAmount": 13970,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 4-12 april"
+    },
+    {
+      "id": "bi-52",
+      "sector": "business",
+      "date": "2026-01-01",
+      "client": "Joshua Morris",
+      "villa": "Nalani",
+      "nights": 4,
+      "pricePerNight": null,
+      "platform": "airbnb",
+      "commissionRate": null,
+      "category": "הזמנת וילה",
+      "grossAmount": 13591,
+      "netAmount": 16112,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 11-15,04"
+    },
+    {
+      "id": "bi-53",
+      "sector": "business",
+      "date": "2026-05-01",
+      "client": "ford",
+      "villa": "Elu + Nalani",
+      "nights": 3,
+      "pricePerNight": null,
+      "platform": "airbnb",
+      "commissionRate": 0.15,
+      "category": "הזמנת וילה",
+      "grossAmount": 14797,
+      "netAmount": 17160,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 14-17/05"
+    },
+    {
+      "id": "bi-54",
+      "sector": "business",
+      "date": "2026-05-01",
+      "client": "chirag",
+      "villa": "Elu + Nalani",
+      "nights": 4,
+      "pricePerNight": null,
+      "platform": "airbnb",
+      "commissionRate": 0.15,
+      "category": "הזמנת וילה",
+      "grossAmount": 15952,
+      "netAmount": 18500,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 21-25/05"
+    },
+    {
+      "id": "bi-55",
+      "sector": "business",
+      "date": "2026-05-01",
+      "client": "Bruno",
+      "villa": "Elu + Nalani",
+      "nights": 10,
+      "pricePerNight": null,
+      "platform": "direct",
+      "commissionRate": null,
+      "category": "הזמנת וילה",
+      "grossAmount": 34000,
+      "netAmount": 34000,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 1 until 11 of may"
+    },
+    {
+      "id": "bi-56",
+      "sector": "business",
+      "date": "2026-07-01",
+      "client": "chekesha",
+      "villa": "Elu + Nalani",
+      "nights": 7,
+      "pricePerNight": null,
+      "platform": "airbnb+ direct",
+      "commissionRate": null,
+      "category": "הזמנת וילה",
+      "grossAmount": 27900,
+      "netAmount": 27900,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 18-25/07"
+    },
+    {
+      "id": "bi-57",
+      "sector": "business",
+      "date": "2026-07-01",
+      "client": "Aimee Gallagher",
+      "villa": "Nalani",
+      "nights": 10,
+      "pricePerNight": null,
+      "platform": "isle blue",
+      "commissionRate": null,
+      "category": "הזמנת וילה",
+      "grossAmount": 26000,
+      "netAmount": 26000,
+      "currency": "USD",
+      "notes": "תאריך מקורי: 29/07-08/08"
+    },
+    {
+      "id": "pi-58",
+      "sector": "personal",
+      "date": "2025-08-01",
+      "client": "",
+      "villa": "",
+      "nights": null,
+      "pricePerNight": null,
+      "platform": "",
+      "commissionRate": null,
+      "category": "Salary",
+      "grossAmount": 3000,
+      "netAmount": 3000,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "pi-59",
+      "sector": "personal",
+      "date": "2025-09-01",
+      "client": "",
+      "villa": "",
+      "nights": null,
+      "pricePerNight": null,
+      "platform": "",
+      "commissionRate": null,
+      "category": "Salary",
+      "grossAmount": 3000,
+      "netAmount": 3000,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "pi-60",
+      "sector": "personal",
+      "date": "2025-10-01",
+      "client": "",
+      "villa": "",
+      "nights": null,
+      "pricePerNight": null,
+      "platform": "",
+      "commissionRate": null,
+      "category": "Salary",
+      "grossAmount": 3000,
+      "netAmount": 3000,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "pi-61",
+      "sector": "personal",
+      "date": "2025-11-01",
+      "client": "",
+      "villa": "",
+      "nights": null,
+      "pricePerNight": null,
+      "platform": "",
+      "commissionRate": null,
+      "category": "Salary",
+      "grossAmount": 3000,
+      "netAmount": 3000,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "pi-62",
+      "sector": "personal",
+      "date": "2025-12-01",
+      "client": "",
+      "villa": "",
+      "nights": null,
+      "pricePerNight": null,
+      "platform": "",
+      "commissionRate": null,
+      "category": "Salary",
+      "grossAmount": 3000,
+      "netAmount": 3000,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "pi-63",
+      "sector": "personal",
+      "date": "2026-01-01",
+      "client": "",
+      "villa": "",
+      "nights": null,
+      "pricePerNight": null,
+      "platform": "",
+      "commissionRate": null,
+      "category": "Salary",
+      "grossAmount": 3000,
+      "netAmount": 3000,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "pi-64",
+      "sector": "personal",
+      "date": "2026-02-01",
+      "client": "",
+      "villa": "",
+      "nights": null,
+      "pricePerNight": null,
+      "platform": "",
+      "commissionRate": null,
+      "category": "Salary",
+      "grossAmount": 3000,
+      "netAmount": 3000,
+      "currency": "ILS",
+      "notes": ""
+    }
+  ],
+  "expenseRecords": [
+    {
+      "id": "exp-1",
+      "sector": "business",
+      "date": "2025-08-01",
+      "group": "Magna Pacific",
+      "category": "Mortgage/Rent",
+      "amount": 16000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-2",
+      "sector": "business",
+      "date": "2025-09-01",
+      "group": "Magna Pacific",
+      "category": "Mortgage/Rent",
+      "amount": 15700,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-3",
+      "sector": "business",
+      "date": "2025-10-01",
+      "group": "Magna Pacific",
+      "category": "Mortgage/Rent",
+      "amount": 15250,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-4",
+      "sector": "business",
+      "date": "2025-11-01",
+      "group": "Magna Pacific",
+      "category": "Mortgage/Rent",
+      "amount": 15314,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-5",
+      "sector": "business",
+      "date": "2025-12-01",
+      "group": "Magna Pacific",
+      "category": "Mortgage/Rent",
+      "amount": 14986,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-6",
+      "sector": "business",
+      "date": "2026-01-01",
+      "group": "Magna Pacific",
+      "category": "Mortgage/Rent",
+      "amount": 14900,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-7",
+      "sector": "business",
+      "date": "2026-02-01",
+      "group": "Magna Pacific",
+      "category": "Mortgage/Rent",
+      "amount": 14900,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-8",
+      "sector": "business",
+      "date": "2026-06-01",
+      "group": "Magna Pacific",
+      "category": "Mortgage/Rent",
+      "amount": 14900,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-9",
+      "sector": "business",
+      "date": "2026-09-01",
+      "group": "Magna Pacific",
+      "category": "Mortgage/Rent",
+      "amount": 14600,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-10",
+      "sector": "business",
+      "date": "2025-08-01",
+      "group": "Magna Pacific",
+      "category": "aya water both villas",
+      "amount": 1800,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-11",
+      "sector": "business",
+      "date": "2025-09-01",
+      "group": "Magna Pacific",
+      "category": "aya water both villas",
+      "amount": 957,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-12",
+      "sector": "business",
+      "date": "2025-10-01",
+      "group": "Magna Pacific",
+      "category": "aya water both villas",
+      "amount": 526,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-13",
+      "sector": "business",
+      "date": "2025-11-01",
+      "group": "Magna Pacific",
+      "category": "aya water both villas",
+      "amount": 1000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-14",
+      "sector": "business",
+      "date": "2026-01-01",
+      "group": "Magna Pacific",
+      "category": "aya water both villas",
+      "amount": 2100,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-15",
+      "sector": "business",
+      "date": "2026-02-01",
+      "group": "Magna Pacific",
+      "category": "aya water both villas",
+      "amount": 1200,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-16",
+      "sector": "business",
+      "date": "2026-06-01",
+      "group": "Magna Pacific",
+      "category": "aya water both villas",
+      "amount": 900,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-17",
+      "sector": "business",
+      "date": "2025-09-01",
+      "group": "Magna Pacific",
+      "category": "Electricity",
+      "amount": 1700,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-18",
+      "sector": "business",
+      "date": "2025-10-01",
+      "group": "Magna Pacific",
+      "category": "Electricity",
+      "amount": 1900,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-19",
+      "sector": "business",
+      "date": "2025-11-01",
+      "group": "Magna Pacific",
+      "category": "Electricity",
+      "amount": 1429,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-20",
+      "sector": "business",
+      "date": "2025-12-01",
+      "group": "Magna Pacific",
+      "category": "Electricity",
+      "amount": 1000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-21",
+      "sector": "business",
+      "date": "2026-01-01",
+      "group": "Magna Pacific",
+      "category": "Electricity",
+      "amount": 2000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-22",
+      "sector": "business",
+      "date": "2026-02-01",
+      "group": "Magna Pacific",
+      "category": "Electricity",
+      "amount": 1790,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-23",
+      "sector": "business",
+      "date": "2026-06-01",
+      "group": "Magna Pacific",
+      "category": "Electricity",
+      "amount": 1200,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-24",
+      "sector": "business",
+      "date": "2025-08-01",
+      "group": "Magna Pacific",
+      "category": "ccss",
+      "amount": 1070,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-25",
+      "sector": "business",
+      "date": "2025-09-01",
+      "group": "Magna Pacific",
+      "category": "ccss",
+      "amount": 1070,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-26",
+      "sector": "business",
+      "date": "2025-10-01",
+      "group": "Magna Pacific",
+      "category": "ccss",
+      "amount": 1070,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-27",
+      "sector": "business",
+      "date": "2025-11-01",
+      "group": "Magna Pacific",
+      "category": "ccss",
+      "amount": 1100,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-28",
+      "sector": "business",
+      "date": "2025-12-01",
+      "group": "Magna Pacific",
+      "category": "ccss",
+      "amount": 850,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-29",
+      "sector": "business",
+      "date": "2026-01-01",
+      "group": "Magna Pacific",
+      "category": "ccss",
+      "amount": 780,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-30",
+      "sector": "business",
+      "date": "2026-02-01",
+      "group": "Magna Pacific",
+      "category": "ccss",
+      "amount": 780,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-31",
+      "sector": "business",
+      "date": "2026-06-01",
+      "group": "Magna Pacific",
+      "category": "ccss",
+      "amount": 700,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-32",
+      "sector": "business",
+      "date": "2025-08-01",
+      "group": "Magna Pacific",
+      "category": "accounting",
+      "amount": 340,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-33",
+      "sector": "business",
+      "date": "2025-09-01",
+      "group": "Magna Pacific",
+      "category": "accounting",
+      "amount": 340,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-34",
+      "sector": "business",
+      "date": "2025-10-01",
+      "group": "Magna Pacific",
+      "category": "accounting",
+      "amount": 340,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-35",
+      "sector": "business",
+      "date": "2025-11-01",
+      "group": "Magna Pacific",
+      "category": "accounting",
+      "amount": 340,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-36",
+      "sector": "business",
+      "date": "2025-12-01",
+      "group": "Magna Pacific",
+      "category": "accounting",
+      "amount": 340,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-37",
+      "sector": "business",
+      "date": "2026-01-01",
+      "group": "Magna Pacific",
+      "category": "accounting",
+      "amount": 340,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-38",
+      "sector": "business",
+      "date": "2026-02-01",
+      "group": "Magna Pacific",
+      "category": "accounting",
+      "amount": 340,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-39",
+      "sector": "business",
+      "date": "2026-06-01",
+      "group": "Magna Pacific",
+      "category": "accounting",
+      "amount": 340,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-40",
+      "sector": "business",
+      "date": "2025-08-01",
+      "group": "Magna Pacific",
+      "category": "daiana",
+      "amount": 2000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-41",
+      "sector": "business",
+      "date": "2025-09-01",
+      "group": "Magna Pacific",
+      "category": "daiana",
+      "amount": 2000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-42",
+      "sector": "business",
+      "date": "2025-10-01",
+      "group": "Magna Pacific",
+      "category": "daiana",
+      "amount": 2000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-43",
+      "sector": "business",
+      "date": "2025-11-01",
+      "group": "Magna Pacific",
+      "category": "daiana",
+      "amount": 2000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-44",
+      "sector": "business",
+      "date": "2025-12-01",
+      "group": "Magna Pacific",
+      "category": "daiana",
+      "amount": 4000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-45",
+      "sector": "business",
+      "date": "2026-01-01",
+      "group": "Magna Pacific",
+      "category": "daiana",
+      "amount": 2500,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-46",
+      "sector": "business",
+      "date": "2026-02-01",
+      "group": "Magna Pacific",
+      "category": "daiana",
+      "amount": 2000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-47",
+      "sector": "business",
+      "date": "2026-06-01",
+      "group": "Magna Pacific",
+      "category": "daiana",
+      "amount": 2000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-48",
+      "sector": "business",
+      "date": "2026-07-01",
+      "group": "Magna Pacific",
+      "category": "daiana",
+      "amount": 2000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-49",
+      "sector": "business",
+      "date": "2026-08-01",
+      "group": "Magna Pacific",
+      "category": "daiana",
+      "amount": 2000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-50",
+      "sector": "business",
+      "date": "2026-09-01",
+      "group": "Magna Pacific",
+      "category": "daiana",
+      "amount": 2000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-51",
+      "sector": "business",
+      "date": "2025-08-01",
+      "group": "Magna Pacific",
+      "category": "Internet",
+      "amount": 254,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-52",
+      "sector": "business",
+      "date": "2025-09-01",
+      "group": "Magna Pacific",
+      "category": "Internet",
+      "amount": 254,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-53",
+      "sector": "business",
+      "date": "2025-10-01",
+      "group": "Magna Pacific",
+      "category": "Internet",
+      "amount": 254,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-54",
+      "sector": "business",
+      "date": "2025-11-01",
+      "group": "Magna Pacific",
+      "category": "Internet",
+      "amount": 254,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-55",
+      "sector": "business",
+      "date": "2025-12-01",
+      "group": "Magna Pacific",
+      "category": "Internet",
+      "amount": 254,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-56",
+      "sector": "business",
+      "date": "2026-01-01",
+      "group": "Magna Pacific",
+      "category": "Internet",
+      "amount": 254,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-57",
+      "sector": "business",
+      "date": "2026-02-01",
+      "group": "Magna Pacific",
+      "category": "Internet",
+      "amount": 254,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-58",
+      "sector": "business",
+      "date": "2026-06-01",
+      "group": "Magna Pacific",
+      "category": "Internet",
+      "amount": 254,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-59",
+      "sector": "business",
+      "date": "2026-07-01",
+      "group": "Magna Pacific",
+      "category": "Internet",
+      "amount": 254,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-60",
+      "sector": "business",
+      "date": "2026-08-01",
+      "group": "Magna Pacific",
+      "category": "Internet",
+      "amount": 254,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-61",
+      "sector": "business",
+      "date": "2026-09-01",
+      "group": "Magna Pacific",
+      "category": "Internet",
+      "amount": 254,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-62",
+      "sector": "business",
+      "date": "2025-08-01",
+      "group": "Magna Pacific",
+      "category": "instagram",
+      "amount": 750,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-63",
+      "sector": "business",
+      "date": "2025-09-01",
+      "group": "Magna Pacific",
+      "category": "instagram",
+      "amount": 750,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-64",
+      "sector": "business",
+      "date": "2025-10-01",
+      "group": "Magna Pacific",
+      "category": "instagram",
+      "amount": 750,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-65",
+      "sector": "business",
+      "date": "2025-11-01",
+      "group": "Magna Pacific",
+      "category": "instagram",
+      "amount": 800,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-66",
+      "sector": "business",
+      "date": "2025-12-01",
+      "group": "Magna Pacific",
+      "category": "instagram",
+      "amount": 750,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-67",
+      "sector": "business",
+      "date": "2026-01-01",
+      "group": "Magna Pacific",
+      "category": "instagram",
+      "amount": 750,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-68",
+      "sector": "business",
+      "date": "2026-02-01",
+      "group": "Magna Pacific",
+      "category": "instagram",
+      "amount": 750,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-69",
+      "sector": "business",
+      "date": "2026-06-01",
+      "group": "Magna Pacific",
+      "category": "instagram",
+      "amount": 830,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-70",
+      "sector": "business",
+      "date": "2026-07-01",
+      "group": "Magna Pacific",
+      "category": "instagram",
+      "amount": 400,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-71",
+      "sector": "business",
+      "date": "2026-08-01",
+      "group": "Magna Pacific",
+      "category": "instagram",
+      "amount": 400,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-72",
+      "sector": "business",
+      "date": "2026-09-01",
+      "group": "Magna Pacific",
+      "category": "instagram",
+      "amount": 400,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-73",
+      "sector": "business",
+      "date": "2025-08-01",
+      "group": "Magna Pacific",
+      "category": "gas",
+      "amount": 200,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-74",
+      "sector": "business",
+      "date": "2025-09-01",
+      "group": "Magna Pacific",
+      "category": "gas",
+      "amount": 200,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-75",
+      "sector": "business",
+      "date": "2025-10-01",
+      "group": "Magna Pacific",
+      "category": "gas",
+      "amount": 200,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-76",
+      "sector": "business",
+      "date": "2025-11-01",
+      "group": "Magna Pacific",
+      "category": "gas",
+      "amount": 200,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-77",
+      "sector": "business",
+      "date": "2025-12-01",
+      "group": "Magna Pacific",
+      "category": "gas",
+      "amount": 200,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-78",
+      "sector": "business",
+      "date": "2026-01-01",
+      "group": "Magna Pacific",
+      "category": "gas",
+      "amount": 200,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-79",
+      "sector": "business",
+      "date": "2026-02-01",
+      "group": "Magna Pacific",
+      "category": "gas",
+      "amount": 200,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-80",
+      "sector": "business",
+      "date": "2026-06-01",
+      "group": "Magna Pacific",
+      "category": "gas",
+      "amount": 200,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-81",
+      "sector": "business",
+      "date": "2025-08-01",
+      "group": "Magna Pacific",
+      "category": "workers pay",
+      "amount": 3728,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-82",
+      "sector": "business",
+      "date": "2025-09-01",
+      "group": "Magna Pacific",
+      "category": "workers pay",
+      "amount": 3728,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-83",
+      "sector": "business",
+      "date": "2025-10-01",
+      "group": "Magna Pacific",
+      "category": "workers pay",
+      "amount": 3728,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-84",
+      "sector": "business",
+      "date": "2025-11-01",
+      "group": "Magna Pacific",
+      "category": "workers pay",
+      "amount": 3728,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-85",
+      "sector": "business",
+      "date": "2025-12-01",
+      "group": "Magna Pacific",
+      "category": "workers pay",
+      "amount": 8500,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-86",
+      "sector": "business",
+      "date": "2026-01-01",
+      "group": "Magna Pacific",
+      "category": "workers pay",
+      "amount": 3728,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-87",
+      "sector": "business",
+      "date": "2026-02-01",
+      "group": "Magna Pacific",
+      "category": "workers pay",
+      "amount": 3728,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-88",
+      "sector": "business",
+      "date": "2026-06-01",
+      "group": "Magna Pacific",
+      "category": "workers pay",
+      "amount": 3728,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-89",
+      "sector": "business",
+      "date": "2025-08-01",
+      "group": "Magna Pacific",
+      "category": "gas for car",
+      "amount": 150,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-90",
+      "sector": "business",
+      "date": "2025-09-01",
+      "group": "Magna Pacific",
+      "category": "gas for car",
+      "amount": 150,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-91",
+      "sector": "business",
+      "date": "2025-10-01",
+      "group": "Magna Pacific",
+      "category": "gas for car",
+      "amount": 150,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-92",
+      "sector": "business",
+      "date": "2025-11-01",
+      "group": "Magna Pacific",
+      "category": "gas for car",
+      "amount": 150,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-93",
+      "sector": "business",
+      "date": "2025-12-01",
+      "group": "Magna Pacific",
+      "category": "gas for car",
+      "amount": 150,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-94",
+      "sector": "business",
+      "date": "2026-01-01",
+      "group": "Magna Pacific",
+      "category": "gas for car",
+      "amount": 150,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-95",
+      "sector": "business",
+      "date": "2026-02-01",
+      "group": "Magna Pacific",
+      "category": "gas for car",
+      "amount": 150,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-96",
+      "sector": "business",
+      "date": "2026-06-01",
+      "group": "Magna Pacific",
+      "category": "gas for car",
+      "amount": 150,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-97",
+      "sector": "business",
+      "date": "2025-11-01",
+      "group": "Magna Pacific",
+      "category": "Repairs",
+      "amount": 9000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-98",
+      "sector": "business",
+      "date": "2026-01-01",
+      "group": "Magna Pacific",
+      "category": "Repairs",
+      "amount": 2000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-99",
+      "sector": "business",
+      "date": "2025-09-01",
+      "group": "Magna Pacific",
+      "category": "Other",
+      "amount": 907,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-100",
+      "sector": "business",
+      "date": "2025-10-01",
+      "group": "Magna Pacific",
+      "category": "Other",
+      "amount": 8000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-101",
+      "sector": "business",
+      "date": "2025-11-01",
+      "group": "Magna Pacific",
+      "category": "Other",
+      "amount": 4500,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-102",
+      "sector": "business",
+      "date": "2025-12-01",
+      "group": "Magna Pacific",
+      "category": "Other",
+      "amount": 2000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-103",
+      "sector": "business",
+      "date": "2026-01-01",
+      "group": "Magna Pacific",
+      "category": "Other",
+      "amount": 4000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-104",
+      "sector": "business",
+      "date": "2026-02-01",
+      "group": "Magna Pacific",
+      "category": "Other",
+      "amount": 3000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-105",
+      "sector": "business",
+      "date": "2026-06-01",
+      "group": "Magna Pacific",
+      "category": "Other",
+      "amount": 3000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-106",
+      "sector": "personal",
+      "date": "2025-08-01",
+      "group": "Mal Pais / Hermosa (CR residence)",
+      "category": "rent",
+      "amount": 2600,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-107",
+      "sector": "personal",
+      "date": "2025-09-01",
+      "group": "Mal Pais / Hermosa (CR residence)",
+      "category": "rent",
+      "amount": 2600,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-108",
+      "sector": "personal",
+      "date": "2025-10-01",
+      "group": "Mal Pais / Hermosa (CR residence)",
+      "category": "rent",
+      "amount": 1400,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-109",
+      "sector": "personal",
+      "date": "2025-11-01",
+      "group": "Mal Pais / Hermosa (CR residence)",
+      "category": "rent",
+      "amount": 1400,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-110",
+      "sector": "personal",
+      "date": "2025-12-01",
+      "group": "Mal Pais / Hermosa (CR residence)",
+      "category": "rent",
+      "amount": 1400,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-111",
+      "sector": "personal",
+      "date": "2026-01-01",
+      "group": "Mal Pais / Hermosa (CR residence)",
+      "category": "rent",
+      "amount": 1400,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-112",
+      "sector": "personal",
+      "date": "2026-02-01",
+      "group": "Mal Pais / Hermosa (CR residence)",
+      "category": "rent",
+      "amount": 1400,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-113",
+      "sector": "personal",
+      "date": "2026-06-01",
+      "group": "Mal Pais / Hermosa (CR residence)",
+      "category": "rent",
+      "amount": 1200,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-114",
+      "sector": "personal",
+      "date": "2025-08-01",
+      "group": "Mal Pais / Hermosa (CR residence)",
+      "category": "condominum payment",
+      "amount": 260,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-115",
+      "sector": "personal",
+      "date": "2025-09-01",
+      "group": "Mal Pais / Hermosa (CR residence)",
+      "category": "condominum payment",
+      "amount": 260,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-116",
+      "sector": "personal",
+      "date": "2025-10-01",
+      "group": "Mal Pais / Hermosa (CR residence)",
+      "category": "condominum payment",
+      "amount": 260,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-117",
+      "sector": "personal",
+      "date": "2025-08-01",
+      "group": "Mal Pais / Hermosa (CR residence)",
+      "category": "water",
+      "amount": 112,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-118",
+      "sector": "personal",
+      "date": "2025-09-01",
+      "group": "Mal Pais / Hermosa (CR residence)",
+      "category": "water",
+      "amount": 58,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-119",
+      "sector": "personal",
+      "date": "2025-08-01",
+      "group": "Mal Pais / Hermosa (CR residence)",
+      "category": "electricity",
+      "amount": 424,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-120",
+      "sector": "personal",
+      "date": "2025-09-01",
+      "group": "Mal Pais / Hermosa (CR residence)",
+      "category": "electricity",
+      "amount": 371,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-121",
+      "sector": "personal",
+      "date": "2025-10-01",
+      "group": "Mal Pais / Hermosa (CR residence)",
+      "category": "electricity",
+      "amount": 270,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-122",
+      "sector": "personal",
+      "date": "2025-11-01",
+      "group": "Mal Pais / Hermosa (CR residence)",
+      "category": "electricity",
+      "amount": 40,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-123",
+      "sector": "personal",
+      "date": "2025-08-01",
+      "group": "Mal Pais / Hermosa (CR residence)",
+      "category": "internet",
+      "amount": 54,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-124",
+      "sector": "personal",
+      "date": "2025-09-01",
+      "group": "Mal Pais / Hermosa (CR residence)",
+      "category": "internet",
+      "amount": 54,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-125",
+      "sector": "personal",
+      "date": "2025-10-01",
+      "group": "Mal Pais / Hermosa (CR residence)",
+      "category": "internet",
+      "amount": 54,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-126",
+      "sector": "personal",
+      "date": "2025-11-01",
+      "group": "Mal Pais / Hermosa (CR residence)",
+      "category": "Other",
+      "amount": 1000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-127",
+      "sector": "personal",
+      "date": "2025-12-01",
+      "group": "Mal Pais / Hermosa (CR residence)",
+      "category": "Other",
+      "amount": 1000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-128",
+      "sector": "personal",
+      "date": "2026-01-01",
+      "group": "Mal Pais / Hermosa (CR residence)",
+      "category": "Other",
+      "amount": 1000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-129",
+      "sector": "personal",
+      "date": "2026-06-01",
+      "group": "Mal Pais / Hermosa (CR residence)",
+      "category": "Other",
+      "amount": 600,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-130",
+      "sector": "personal",
+      "date": "2025-08-01",
+      "group": "Israel",
+      "category": "rent",
+      "amount": 1500,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-131",
+      "sector": "personal",
+      "date": "2025-09-01",
+      "group": "Israel",
+      "category": "rent",
+      "amount": 1500,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-132",
+      "sector": "personal",
+      "date": "2025-10-01",
+      "group": "Israel",
+      "category": "rent",
+      "amount": 1500,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-133",
+      "sector": "personal",
+      "date": "2025-11-01",
+      "group": "Israel",
+      "category": "rent",
+      "amount": 1700,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-134",
+      "sector": "personal",
+      "date": "2025-12-01",
+      "group": "Israel",
+      "category": "rent",
+      "amount": 1700,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-135",
+      "sector": "personal",
+      "date": "2026-01-01",
+      "group": "Israel",
+      "category": "rent",
+      "amount": 1700,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-136",
+      "sector": "personal",
+      "date": "2026-02-01",
+      "group": "Israel",
+      "category": "rent",
+      "amount": 1700,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-137",
+      "sector": "personal",
+      "date": "2026-06-01",
+      "group": "Israel",
+      "category": "rent",
+      "amount": 2500,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-138",
+      "sector": "personal",
+      "date": "2026-07-01",
+      "group": "Israel",
+      "category": "rent",
+      "amount": 2500,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-139",
+      "sector": "personal",
+      "date": "2026-08-01",
+      "group": "Israel",
+      "category": "rent",
+      "amount": 2500,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-140",
+      "sector": "personal",
+      "date": "2026-09-01",
+      "group": "Israel",
+      "category": "rent",
+      "amount": 2500,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-141",
+      "sector": "personal",
+      "date": "2025-08-01",
+      "group": "Israel",
+      "category": "electricity",
+      "amount": 100,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-142",
+      "sector": "personal",
+      "date": "2025-09-01",
+      "group": "Israel",
+      "category": "electricity",
+      "amount": 100,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-143",
+      "sector": "personal",
+      "date": "2025-10-01",
+      "group": "Israel",
+      "category": "electricity",
+      "amount": 100,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-144",
+      "sector": "personal",
+      "date": "2026-06-01",
+      "group": "Israel",
+      "category": "electricity",
+      "amount": 100,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-145",
+      "sector": "personal",
+      "date": "2026-07-01",
+      "group": "Israel",
+      "category": "electricity",
+      "amount": 300,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-146",
+      "sector": "personal",
+      "date": "2026-08-01",
+      "group": "Israel",
+      "category": "electricity",
+      "amount": 300,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-147",
+      "sector": "personal",
+      "date": "2026-09-01",
+      "group": "Israel",
+      "category": "electricity",
+      "amount": 300,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-148",
+      "sector": "personal",
+      "date": "2025-08-01",
+      "group": "Israel",
+      "category": "car gasoline",
+      "amount": 400,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-149",
+      "sector": "personal",
+      "date": "2025-09-01",
+      "group": "Israel",
+      "category": "car gasoline",
+      "amount": 400,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-150",
+      "sector": "personal",
+      "date": "2025-10-01",
+      "group": "Israel",
+      "category": "car gasoline",
+      "amount": 400,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-151",
+      "sector": "personal",
+      "date": "2025-11-01",
+      "group": "Israel",
+      "category": "car gasoline",
+      "amount": 200,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-152",
+      "sector": "personal",
+      "date": "2025-12-01",
+      "group": "Israel",
+      "category": "car gasoline",
+      "amount": 200,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-153",
+      "sector": "personal",
+      "date": "2026-01-01",
+      "group": "Israel",
+      "category": "car gasoline",
+      "amount": 200,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-154",
+      "sector": "personal",
+      "date": "2026-02-01",
+      "group": "Israel",
+      "category": "car gasoline",
+      "amount": 200,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-155",
+      "sector": "personal",
+      "date": "2026-06-01",
+      "group": "Israel",
+      "category": "car gasoline",
+      "amount": 200,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-156",
+      "sector": "personal",
+      "date": "2026-07-01",
+      "group": "Israel",
+      "category": "car gasoline",
+      "amount": 200,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-157",
+      "sector": "personal",
+      "date": "2026-08-01",
+      "group": "Israel",
+      "category": "car gasoline",
+      "amount": 200,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-158",
+      "sector": "personal",
+      "date": "2026-09-01",
+      "group": "Israel",
+      "category": "car gasoline",
+      "amount": 200,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-159",
+      "sector": "personal",
+      "date": "2025-08-01",
+      "group": "Israel",
+      "category": "food",
+      "amount": 1000,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-160",
+      "sector": "personal",
+      "date": "2025-09-01",
+      "group": "Israel",
+      "category": "food",
+      "amount": 1000,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-161",
+      "sector": "personal",
+      "date": "2025-10-01",
+      "group": "Israel",
+      "category": "food",
+      "amount": 1000,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-162",
+      "sector": "personal",
+      "date": "2025-11-01",
+      "group": "Israel",
+      "category": "food",
+      "amount": 1000,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-163",
+      "sector": "personal",
+      "date": "2025-12-01",
+      "group": "Israel",
+      "category": "food",
+      "amount": 1000,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-164",
+      "sector": "personal",
+      "date": "2026-01-01",
+      "group": "Israel",
+      "category": "food",
+      "amount": 1000,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-165",
+      "sector": "personal",
+      "date": "2026-02-01",
+      "group": "Israel",
+      "category": "food",
+      "amount": 1000,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-166",
+      "sector": "personal",
+      "date": "2026-06-01",
+      "group": "Israel",
+      "category": "food",
+      "amount": 1000,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-167",
+      "sector": "personal",
+      "date": "2026-07-01",
+      "group": "Israel",
+      "category": "food",
+      "amount": 1000,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-168",
+      "sector": "personal",
+      "date": "2026-08-01",
+      "group": "Israel",
+      "category": "food",
+      "amount": 1000,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-169",
+      "sector": "personal",
+      "date": "2026-09-01",
+      "group": "Israel",
+      "category": "food",
+      "amount": 1000,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-170",
+      "sector": "personal",
+      "date": "2026-06-01",
+      "group": "Israel",
+      "category": "Other",
+      "amount": 1000,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-171",
+      "sector": "personal",
+      "date": "2026-07-01",
+      "group": "Israel",
+      "category": "Other",
+      "amount": 1000,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-172",
+      "sector": "personal",
+      "date": "2026-08-01",
+      "group": "Israel",
+      "category": "Other",
+      "amount": 1000,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-173",
+      "sector": "personal",
+      "date": "2026-09-01",
+      "group": "Israel",
+      "category": "Other",
+      "amount": 1000,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-174",
+      "sector": "personal",
+      "date": "2025-08-01",
+      "group": "Israel",
+      "category": "loans",
+      "amount": 1756,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-175",
+      "sector": "personal",
+      "date": "2025-09-01",
+      "group": "Israel",
+      "category": "loans",
+      "amount": 1756,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-176",
+      "sector": "personal",
+      "date": "2025-10-01",
+      "group": "Israel",
+      "category": "loans",
+      "amount": 1756,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-177",
+      "sector": "personal",
+      "date": "2025-11-01",
+      "group": "Israel",
+      "category": "loans",
+      "amount": 1756,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-178",
+      "sector": "personal",
+      "date": "2025-12-01",
+      "group": "Israel",
+      "category": "loans",
+      "amount": 1756,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-179",
+      "sector": "personal",
+      "date": "2026-01-01",
+      "group": "Israel",
+      "category": "loans",
+      "amount": 1756,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-180",
+      "sector": "personal",
+      "date": "2026-02-01",
+      "group": "Israel",
+      "category": "loans",
+      "amount": 1756,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-181",
+      "sector": "personal",
+      "date": "2026-06-01",
+      "group": "Israel",
+      "category": "loans",
+      "amount": 1756,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-182",
+      "sector": "personal",
+      "date": "2026-07-01",
+      "group": "Israel",
+      "category": "loans",
+      "amount": 1756,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-183",
+      "sector": "personal",
+      "date": "2026-08-01",
+      "group": "Israel",
+      "category": "loans",
+      "amount": 1756,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-184",
+      "sector": "personal",
+      "date": "2026-09-01",
+      "group": "Israel",
+      "category": "loans",
+      "amount": 1756,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-185",
+      "sector": "personal",
+      "date": "2025-08-01",
+      "group": "Israel",
+      "category": "child care",
+      "amount": 290,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-186",
+      "sector": "personal",
+      "date": "2025-09-01",
+      "group": "Israel",
+      "category": "child care",
+      "amount": 290,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-187",
+      "sector": "personal",
+      "date": "2025-10-01",
+      "group": "Israel",
+      "category": "child care",
+      "amount": 290,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-188",
+      "sector": "personal",
+      "date": "2025-11-01",
+      "group": "Israel",
+      "category": "child care",
+      "amount": 290,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-189",
+      "sector": "personal",
+      "date": "2025-12-01",
+      "group": "Israel",
+      "category": "child care",
+      "amount": 290,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-190",
+      "sector": "personal",
+      "date": "2026-01-01",
+      "group": "Israel",
+      "category": "child care",
+      "amount": 290,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-191",
+      "sector": "personal",
+      "date": "2025-08-01",
+      "group": "Israel",
+      "category": "nitay school",
+      "amount": 1000,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-192",
+      "sector": "personal",
+      "date": "2025-09-01",
+      "group": "Israel",
+      "category": "nitay school",
+      "amount": 1000,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-193",
+      "sector": "personal",
+      "date": "2025-10-01",
+      "group": "Israel",
+      "category": "nitay school",
+      "amount": 1000,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-194",
+      "sector": "personal",
+      "date": "2025-11-01",
+      "group": "Israel",
+      "category": "nitay school",
+      "amount": 1000,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-195",
+      "sector": "personal",
+      "date": "2025-12-01",
+      "group": "Israel",
+      "category": "nitay school",
+      "amount": 1000,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-196",
+      "sector": "personal",
+      "date": "2026-01-01",
+      "group": "Israel",
+      "category": "nitay school",
+      "amount": 1000,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-197",
+      "sector": "personal",
+      "date": "2026-06-01",
+      "group": "Israel",
+      "category": "nitay school",
+      "amount": 830,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-198",
+      "sector": "personal",
+      "date": "2026-07-01",
+      "group": "Israel",
+      "category": "nitay school",
+      "amount": 1000,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-199",
+      "sector": "personal",
+      "date": "2026-08-01",
+      "group": "Israel",
+      "category": "nitay school",
+      "amount": 1000,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-200",
+      "sector": "personal",
+      "date": "2026-09-01",
+      "group": "Israel",
+      "category": "nitay school",
+      "amount": 1000,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-201",
+      "sector": "business",
+      "date": "2025-08-01",
+      "group": "Suppliers",
+      "category": "terra eqipos",
+      "amount": 1000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-202",
+      "sector": "business",
+      "date": "2025-09-01",
+      "group": "Suppliers",
+      "category": "terra eqipos",
+      "amount": 1000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-203",
+      "sector": "business",
+      "date": "2025-10-01",
+      "group": "Suppliers",
+      "category": "terra eqipos",
+      "amount": 1000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-204",
+      "sector": "business",
+      "date": "2025-11-01",
+      "group": "Suppliers",
+      "category": "terra eqipos",
+      "amount": 1000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-205",
+      "sector": "business",
+      "date": "2025-12-01",
+      "group": "Suppliers",
+      "category": "terra eqipos",
+      "amount": 1000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-206",
+      "sector": "business",
+      "date": "2026-01-01",
+      "group": "Suppliers",
+      "category": "terra eqipos",
+      "amount": 1000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-207",
+      "sector": "business",
+      "date": "2026-02-01",
+      "group": "Suppliers",
+      "category": "terra eqipos",
+      "amount": 1000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-208",
+      "sector": "business",
+      "date": "2025-08-01",
+      "group": "Suppliers",
+      "category": "san miguel",
+      "amount": 500,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-209",
+      "sector": "business",
+      "date": "2025-09-01",
+      "group": "Suppliers",
+      "category": "san miguel",
+      "amount": 500,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-210",
+      "sector": "business",
+      "date": "2025-10-01",
+      "group": "Suppliers",
+      "category": "san miguel",
+      "amount": 500,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-211",
+      "sector": "business",
+      "date": "2025-11-01",
+      "group": "Suppliers",
+      "category": "san miguel",
+      "amount": 500,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-212",
+      "sector": "business",
+      "date": "2025-12-01",
+      "group": "Suppliers",
+      "category": "san miguel",
+      "amount": 500,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-213",
+      "sector": "business",
+      "date": "2026-01-01",
+      "group": "Suppliers",
+      "category": "san miguel",
+      "amount": 500,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-214",
+      "sector": "business",
+      "date": "2026-02-01",
+      "group": "Suppliers",
+      "category": "san miguel",
+      "amount": 500,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-215",
+      "sector": "business",
+      "date": "2026-06-01",
+      "group": "Suppliers",
+      "category": "san miguel",
+      "amount": 500,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-216",
+      "sector": "business",
+      "date": "2026-07-01",
+      "group": "Suppliers",
+      "category": "san miguel",
+      "amount": 500,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-217",
+      "sector": "business",
+      "date": "2026-08-01",
+      "group": "Suppliers",
+      "category": "san miguel",
+      "amount": 500,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-218",
+      "sector": "business",
+      "date": "2026-09-01",
+      "group": "Suppliers",
+      "category": "san miguel",
+      "amount": 500,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-219",
+      "sector": "business",
+      "date": "2025-10-01",
+      "group": "Suppliers",
+      "category": "rafa",
+      "amount": 2000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-220",
+      "sector": "business",
+      "date": "2026-01-01",
+      "group": "Suppliers",
+      "category": "rafa",
+      "amount": 2000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-221",
+      "sector": "business",
+      "date": "2026-02-01",
+      "group": "Suppliers",
+      "category": "rafa",
+      "amount": 2000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-222",
+      "sector": "business",
+      "date": "2026-06-01",
+      "group": "Suppliers",
+      "category": "rafa",
+      "amount": 1000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-223",
+      "sector": "business",
+      "date": "2026-07-01",
+      "group": "Suppliers",
+      "category": "rafa",
+      "amount": 1000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-224",
+      "sector": "business",
+      "date": "2026-08-01",
+      "group": "Suppliers",
+      "category": "rafa",
+      "amount": 1000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-225",
+      "sector": "business",
+      "date": "2026-09-01",
+      "group": "Suppliers",
+      "category": "rafa",
+      "amount": 1000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-226",
+      "sector": "business",
+      "date": "2025-09-01",
+      "group": "Suppliers",
+      "category": "concept",
+      "amount": 2000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-227",
+      "sector": "business",
+      "date": "2025-09-01",
+      "group": "Suppliers",
+      "category": "ac",
+      "amount": 2000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-228",
+      "sector": "business",
+      "date": "2026-01-01",
+      "group": "Suppliers",
+      "category": "ac",
+      "amount": 2000,
+      "currency": "USD",
+      "notes": ""
+    },
+    {
+      "id": "exp-229",
+      "sector": "personal",
+      "date": "2025-11-01",
+      "group": "Children",
+      "category": "School / College Expenses",
+      "amount": 650,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-230",
+      "sector": "personal",
+      "date": "2025-12-01",
+      "group": "Children",
+      "category": "School / College Expenses",
+      "amount": 650,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-231",
+      "sector": "personal",
+      "date": "2026-01-01",
+      "group": "Children",
+      "category": "School / College Expenses",
+      "amount": 650,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-232",
+      "sector": "personal",
+      "date": "2026-02-01",
+      "group": "Children",
+      "category": "School / College Expenses",
+      "amount": 650,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-233",
+      "sector": "personal",
+      "date": "2026-09-01",
+      "group": "Children",
+      "category": "School / College Expenses",
+      "amount": 250,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-234",
+      "sector": "personal",
+      "date": "2026-01-01",
+      "group": "Children",
+      "category": "Gifts",
+      "amount": 200,
+      "currency": "ILS",
+      "notes": ""
+    },
+    {
+      "id": "exp-235",
+      "sector": "personal",
+      "date": "2025-11-01",
+      "group": "Children",
+      "category": "Other",
+      "amount": 1000,
+      "currency": "ILS",
+      "notes": ""
+    }
+  ]
+}</script>
+<script src="app.js"></script>
 </body>
 </html>
