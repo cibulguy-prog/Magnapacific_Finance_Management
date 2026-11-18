@@ -107,7 +107,8 @@ function normalizeDB(){
     r.clientType = r.clientType === "influencer" ? "influencer" : "paying";
     r.checkIn = r.checkIn || "";
     r.checkOut = r.checkOut || "";
-    r.date = r.date || r.checkIn || "";
+    r.checkIn = cleanDate(r.checkIn); r.checkOut = cleanDate(r.checkOut);
+    r.date = cleanDate(r.date) || r.checkIn || "";
     r.client = r.client || ""; r.villa = r.villa || ""; r.platform = r.platform || ""; r.notes = r.notes || "";
     r.currency = r.currency || "USD";
     r.grossAmount = Number(r.grossAmount) || 0;
@@ -119,7 +120,7 @@ function normalizeDB(){
   DB.expenseRecords.forEach(r=>{
     r.owner = r.owner || "";
     r.recurringId = r.recurringId || "";
-    r.date = r.date || "";
+    r.date = cleanDate(r.date);
     r.currency = r.currency || "USD";
     r.amount = Number(r.amount) || 0;
     r.notes = r.notes || "";
@@ -128,6 +129,7 @@ function normalizeDB(){
     p.amount = Number(p.amount) || 0;
     p.currency = p.currency || "USD";
     ["date","method","notes","receiptUrl","receiptName","incomeId"].forEach(k=>{ p[k] = p[k] || ""; });
+    p.date = cleanDate(p.date);
   });
   DB.recurringExpenses.forEach(t=>{
     t.owner = t.owner || "";
@@ -135,8 +137,8 @@ function normalizeDB(){
     t.active = !(t.active === false || String(t.active).toUpperCase() === "FALSE");
     t.amount = Number(t.amount) || 0;
     t.currency = t.currency || "USD";
-    t.startMonth = String(t.startMonth || "").slice(0,7);
-    t.endMonth = String(t.endMonth || "").slice(0,7);
+    t.startMonth = cleanDate(String(t.startMonth || "").slice(0,7));
+    t.endMonth = cleanDate(String(t.endMonth || "").slice(0,7));
     t.skipMonths = String(t.skipMonths || "");
     t.notes = t.notes || "";
   });
@@ -230,6 +232,37 @@ function nextMonthKey(k){
 }
 function currentMonthKey(){ return new Date().toISOString().slice(0,7); }
 
+/* dates typed into a date field pass through junk values on the way (year 0002, 0020, 0202… then 2026),
+   so only a real, plausible year is ever accepted */
+function plausibleDate(s){
+  const m = /^(\d{4})-\d{2}(-\d{2})?$/.exec(String(s||""));
+  if(!m) return false;
+  const y = parseInt(m[1],10);
+  return y >= 2000 && y <= 2100;
+}
+function cleanDate(s){ return plausibleDate(s) ? String(s) : ""; }
+
+/* Gate for <input type="date|month"> edits. Returns true when the value is ready to be saved.
+   While the person is still typing, partial values ('' or a year like 0202) are ignored — and the row is
+   never rebuilt under their cursor. When the field loses focus, a cleared field is saved as cleared
+   and an impossible value snaps back to the last good one. */
+function dateGate(el, handler){
+  const v = el.value;
+  const focused = (el === document.activeElement);
+  if(plausibleDate(v)){ el.defaultValue = v; return true; }
+  if(focused){
+    if(!el._pendingBlur){
+      el._pendingBlur = true;
+      el.addEventListener("blur", ()=>{ el._pendingBlur = false; handler({target: el}); }, {once:true});
+    }
+    return false;
+  }
+  if(v === "" && el.defaultValue === ""){ return false; }
+  if(v === ""){ el.defaultValue = ""; return true; }   // deliberately cleared
+  el.value = el.defaultValue;                           // junk year: put the last good value back
+  return false;
+}
+
 /* ---------------- data load / persist ---------------- */
 function scriptUrlConfigured(){
   return typeof APPS_SCRIPT_URL === "string" && APPS_SCRIPT_URL && !APPS_SCRIPT_URL.startsWith("PASTE_");
@@ -316,8 +349,8 @@ function persist(){
 /* ---------------- filters / derived data ---------------- */
 function allYears(){
   const ys = new Set();
-  DB.incomeRecords.forEach(r => { const y = recYear(r); if(y) ys.add(y); });
-  DB.expenseRecords.forEach(r => { const y = recYear(r); if(y) ys.add(y); });
+  DB.incomeRecords.forEach(r => { const y = recYear(r); if(y && plausibleDate(y + "-01")) ys.add(y); });
+  DB.expenseRecords.forEach(r => { const y = recYear(r); if(y && plausibleDate(y + "-01")) ys.add(y); });
   return Array.from(ys).sort();
 }
 function inYear(r){ return filters.year === "all" || recYear(r) === filters.year; }
@@ -1201,6 +1234,7 @@ function handlePaymentChange(e){
   if(!tr) return;
   const rec = DB.paymentRecords.find(p=>p.id === tr.dataset.id);
   if(!rec) return;
+  if(el.type === "date" && !dateGate(el, handlePaymentChange)) return;
   switch(el.dataset.field){
     case "date": rec.date = el.value; break;
     case "incomeId": rec.incomeId = el.value; { const b = incomeById(el.value); if(b && !rec.amount) rec.currency = b.currency; } break;
@@ -1280,6 +1314,7 @@ function handleIncomeChange(e){
   const rec = DB.incomeRecords.find(r=>r.id===tr.dataset.id);
   if(!rec) return;
   const field = el.dataset.field;
+  if(el.type === "date" && !dateGate(el, handleIncomeChange)) return;
   let rerenderRow = false, recalcGross = false;
   switch(field){
     case "type":
@@ -1298,7 +1333,7 @@ function handleIncomeChange(e){
       const d = daysBetween(rec.checkIn, rec.checkOut);
       if(d != null && d > 0) rec.nights = d;
       if(field === "checkIn" && !rec.date) rec.date = el.value;
-      recalcGross = true; rerenderRow = true; break;
+      recalcGross = true; break;
     }
     case "client": rec.client = el.value; break;
     case "category": {
@@ -1325,14 +1360,18 @@ function handleIncomeChange(e){
      editing any other cell never rewrites an amount that was entered by hand */
   if(recalcGross && rec.clientType !== "influencer" && rec.nights && rec.pricePerNight){
     rec.grossAmount = rec.nights * rec.pricePerNight;
-    rerenderRow = true;
   }
   rec.netAmount = incNet(rec);
   if(rerenderRow){
-    const wrap = document.createElement("tbody");
-    wrap.innerHTML = incomeRowHtml(rec);
-    tr.replaceWith(wrap.firstElementChild);
+    if(tr.isConnected){
+      const wrap = document.createElement("tbody");
+      wrap.innerHTML = incomeRowHtml(rec);
+      tr.replaceWith(wrap.firstElementChild);
+    }
   } else {
+    /* update the dependent cells in place — never rebuild the row while someone is typing in it */
+    const setIn = (f, v) => { const i = tr.querySelector(`[data-field="${f}"]`); if(i && i !== document.activeElement) i.value = v; };
+    setIn("nights", rec.nights ?? ""); setIn("grossAmount", rec.clientType === "influencer" ? 0 : (rec.grossAmount || 0)); setIn("date", rec.date);
     const net = tr.querySelector(".net-cell"); if(net && rec.sector === "business") net.textContent = fmtNum(incNet(rec));
     const pay = tr.querySelector(".pill-btn"); if(pay) pay.innerHTML = statusPill(bookingStatus(rec));
   }
@@ -1365,6 +1404,10 @@ function handleExpenseChange(e){
   const rec = DB.expenseRecords.find(r=>r.id===tr.dataset.id);
   if(!rec) return;
   const field = el.dataset.field;
+  if(el.type === "month"){
+    if(!dateGate(el, handleExpenseChange)) return;
+    if(!el.value){ el.value = el.defaultValue = rec.date.slice(0,7); return; }   // a month can't be left blank
+  }
   let rerenderRow = false;
   switch(field){
     case "type": {
@@ -1400,7 +1443,7 @@ function handleExpenseChange(e){
     case "notes": rec.notes = el.value; break;
     case "date": rec.date = el.value + "-01"; break;
   }
-  if(rerenderRow){
+  if(rerenderRow && tr.isConnected){
     const wrap = document.createElement("tbody");
     wrap.innerHTML = expenseRowHtml(rec);
     tr.replaceWith(wrap.firstElementChild);
@@ -1417,6 +1460,7 @@ function handleFixedChange(e){
   if(!tr) return;
   const t = DB.recurringExpenses.find(x=>x.id === tr.dataset.id);
   if(!t) return;
+  if(el.type === "month" && !dateGate(el, handleFixedChange)) return;
   let rerenderRow = false;
   switch(el.dataset.field){
     case "active": t.active = el.checked; break;
@@ -1449,7 +1493,7 @@ function handleFixedChange(e){
     case "endMonth": t.endMonth = el.value; break;
     case "notes": t.notes = el.value; break;
   }
-  if(rerenderRow){
+  if(rerenderRow && tr.isConnected){
     const wrap = document.createElement("tbody");
     wrap.innerHTML = fixedRowHtml(t);
     tr.replaceWith(wrap.firstElementChild);
